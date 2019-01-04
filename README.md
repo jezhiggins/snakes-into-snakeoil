@@ -1,4 +1,6 @@
-##Snakes Into Snake Oil - What Blockchains Are And Why They're Terrible
+Presentation to [ACCU Conference](http://conference.accu.org/), April 2019
+
+## Snakes Into Snake Oil - What Blockchains Are And Why They're Terrible
 
 Since Bitcoin first rose to public awareness in the early 2010s,cryptocurrency enthusiasts have predicted a new world order. Central banks would fall away to be replaced with a consensus currency arising almost magically out of a worldwide network of independent computers, each transaction indelibly carved into the _blockchain_. The blockchain, immutable and permanent, stretching back in time to the _genesis block_, and growing, every few minutes, one block at a time, is, they say, the answer to all our economic ills.
 
@@ -16,4 +18,6 @@ The distributed nature of public blockchains purports to allow us to trust data 
 
 After all that doom and gloom we'll try to end on a small positive note, with a brief look at a project which I believe _is_ a good fit for a blockchain solution, and which might even make the world a slightly better place.
 
+---
 
+[Jez Higgins](https://www.jezuk.co.uk/) is a jobbing programmer so dedicated to the cause of software craftsmanship he once cycled to the conference from Birmingham. He was the 2017 Player of the Season for Kings Heath Hockey Club Mens IIIs. He can be contacted for programming assistance or hockey coaching at [@jezhiggins](http://twitter.com/jezhiggins) or [jez@jezuk.co.uk](mailto:jez@jezuk.co.uk). He should probably update this bio.
