@@ -1,0 +1,12 @@
+== THANKS
+
+image::business-card-front.png["Jez UK", float="right", margin=0]
+
+Jez Higgins
+
+@jezhiggins
+
+[NOTE.speaker]
+--
+And that's why blockchains are terrible.
+--

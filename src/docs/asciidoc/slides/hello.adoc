@@ -1,0 +1,11 @@
+== Snakes Into Snake Oil
+*_What Blockchains Are And Why They Are Terrible_*
+
+image::illuminated-by-monitor-light.jpg["Illuminated By Monitor Light"]
+
+Jez Higgins
+
+[NOTE.speaker]
+--
+Hello everyone. I'm Jez and I'm currently software-grandad for West Midlands Fire Service and a software developer-cum-researcher for the Archangel Project. I have, over the past couple of years or so, done various bits of blockchain development and I have "opinions". And I'm going to expound on those today, and hopefully by the time you leave you'll all agreement with me :)
+--
