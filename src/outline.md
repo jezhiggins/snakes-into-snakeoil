@@ -34,9 +34,9 @@ Immutability is great, but it's also a problem. The only way to fix bugs or to u
 The situation is similar for smart contracts, but worse. How do you fix bugs in an unchangeable piece of code? How do you even debug the problem?
 
 And what if the data is wrong?
-* Land registry 
+* Land registry - map of my house in Pembrokeshire. Title is established, although unclear. Precise northern boundary not known. Ownership of this lane is unknown. Ownership of woodland adjacent litagated recently. Boundaries of neighbouring farm delayed in probate. Land registry data often based on maps, but those maps are inaccurate. Older deeds refer to the land demarquated by landscape features. What if those are lost or move (eg watercourses).  
 * Art - https://shkspr.mobi/blog/2018/06/how-i-became-leonardo-da-vinci-on-the-blockchain/
 * CVs
 * Anything else?
 
-Blockchains can only verify things which happen on the blockchain.
+Blockchains can only verify things which happen on the blockchain. Anything off the chain relies on external validation.
