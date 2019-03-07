@@ -1,0 +1,20 @@
+== Building A Blockchain
+
+* Linked lists
+
+* Hash pointers
+
+* Merkle trees
+
+* 'Transactions'
+
+* Distribute ledgers
+
+* Consensus mechanisms
+** Proof-of-work
+** Proof-of-authority
+** Delegated proof-of-authority
+** Proof-of-stake
+
+* Smart contracts
+

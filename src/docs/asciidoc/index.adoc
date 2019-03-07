@@ -5,6 +5,12 @@
 
 include::slides/hello.adoc[]
 
+include::slides/what-are-blockchains-and-cryptocurrencies.adoc[]
+include::slides/building-a-blockchain.adoc[]
+
+include::slides/a-million-applications-all-terrible.adoc[]
+include::slides/archangel-a-glimmer-of-hope.adoc[]
+
 include::slides/thanks.adoc[]
 
 :imagesdir: images

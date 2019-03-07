@@ -7,5 +7,5 @@ Jez Higgins
 
 [NOTE.speaker]
 --
-Hello everyone. I'm Jez and I'm currently software-grandad for West Midlands Fire Service and a software developer-cum-researcher for the Archangel Project. I have, over the past couple of years or so, done various bits of blockchain development and I have "opinions". And I'm going to expound on those today, and hopefully by the time you leave you'll all agreement with me :)
+Hello everyone. I'm Jez. I'm part of the older whiter beardier demographic programming demographic, which I do feel guilty about. But not, if I'm frank, guilty enough to change careers and make way for someone younger.
 --
