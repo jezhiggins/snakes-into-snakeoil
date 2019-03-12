@@ -8,4 +8,55 @@ Jez Higgins
 [NOTE.speaker]
 --
 Hello everyone. I'm Jez. I'm part of the older whiter beardier demographic programming demographic, which I do feel guilty about. But not, if I'm frank, guilty enough to change careers and make way for someone younger.
+
+This is the 9th time I've spoken at the ACCU Conference. That came as something a surprise when I counted back and realised, because I'm don't consider myself to be an expert in anything at all, and I am sure as hell that I don't have any particular wisdom to impart.  Nonetheless, I'm grateful for the chance to speak, and I'm delighted that everyone here has chosen to come along to hear me burble on for the next 90 minutes, especially over such stiff competition.
+
+This is the point, by the way, where it's ok to leave if you're starting to realise you've made a terrible mistake.  It's entirely fine.
+
+So anyway, on those previous eight occasions I had a think about what I might talk about, wrote a proposal, and sent it in.  Sometimes I didn't think for very long - for the 2012 conference I didn't even consider submitting until 35 minutes before the deadline and got the proposal in with 28 seconds to go.
+
+Anyway, this year, for this conference, I thought about things a lot.  A hell of a lot. Not because I was worried that the subject might not be of interest, or because I wouldn't have enought to talk about or anything like that.
+
+No, I gave it a lot of thought because ...
+--
+
+== !
+
+____
+Did I want my name associated on the internet with the words Blockchain and Cryptocurrency?
+____
+
+[NOTE.speaker]
+--
+Well, not really, but I'm sure I can handle it.
+
+As you know, we in software, even more so than society at large, as absolute fools for fashion and for hype. Some technologies appear as out of nowhere - we all woke up one morning and there were NoSQL databases. Other things snowball, sometimes over years or even decades, until they become some overwhelming it forces you to give it attention. Function programming :) Growing since the 50s, now everywhere :)
+
+Blockchain technology seems to me like a snowballer. Bitcoin, the primary force behind all this has been bubbling away there for years - there have been fits and starts perhaps - but over the past what two or three years, cryptocurrencies, blockchains, and distributed ledger technologies seem to have built to some kind of unstoppable force.
+
+Seem to.  Not _have built_ into an unstoppable force, but _seem to have built_.
+
+Today, together, we can smash the blockchain snowball.
+--
+
+== Snakes Into Snake Oil
+
+[%step]
+* What Blockchains Are
+
+* And Why They're Terrible
+
+[NOTE.speaker]
+--
+I got a couple of people to look over my proposal before I submitted it. They were generally positive, although one comment I got was _I wouldn't ever go for such a click baity title_.
+
+Snakes Into Snake Oil.
+
+I didn't want anybody coming along today think I was going to tell you how cryptocurrencies were the future of money, or if you just hodl long enough you'll be driving a lambo, or how the blockchain is going to revolutionise Ubers, or something.
+
+First, I'm going to talk about what blockchains are.
+
+Then, I'm going to talk about why they're terrible.
+
+It was all there in the title :)
 --
