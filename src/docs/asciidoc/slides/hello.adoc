@@ -7,7 +7,7 @@ Jez Higgins
 
 [NOTE.speaker]
 --
-Hello everyone. I'm Jez. I'm part of the older whiter beardier demographic programming demographic, which I do feel guilty about. But not, if I'm frank, guilty enough to change careers and make way for someone younger.
+Hello everyone. I'm Jez. I'm part of the older whiter beardier programming demographic, which I do feel guilty about. But not, if I'm frank, guilty enough to change careers and make way for someone younger.
 
 This is the 9th time I've spoken at the ACCU Conference. That came as something a surprise when I counted back and realised, because I'm don't consider myself to be an expert in anything at all, and I am sure as hell that I don't have any particular wisdom to impart.  Nonetheless, I'm grateful for the chance to speak, and I'm delighted that everyone here has chosen to come along to hear me burble on for the next 90 minutes, especially over such stiff competition.
 
@@ -28,11 +28,11 @@ ____
 
 [NOTE.speaker]
 --
-Well, not really, but I'm sure I can handle it.
+Well, not really, but I'm sure I'm can handle it. (Also old, white, bearded means i get a pass anyway.)
 
-As you know, we in software, even more so than society at large, as absolute fools for fashion and for hype. Some technologies appear as out of nowhere - we all woke up one morning and there were NoSQL databases. Other things snowball, sometimes over years or even decades, until they become some overwhelming it forces you to give it attention. Function programming :) Growing since the 50s, now everywhere :)
+As you know, we in software, even more so than society at large, as absolute fools for fashion and for hype. Some technologies appear as out of nowhere - we all woke up one morning and NoSQL databases were on trend. Other things snowball, sometimes over years or even decades, until the hype cycle become some overwhelming it forces you to give it attention. Python is perhaps one example. Functional programming :) Growing since the 50s, now everywhere :)
 
-Blockchain technology seems to me like a snowballer. Bitcoin, the primary force behind all this has been bubbling away there for years - there have been fits and starts perhaps - but over the past what two or three years, cryptocurrencies, blockchains, and distributed ledger technologies seem to have built to some kind of unstoppable force.
+Blockchain technology seems to me like a snowballer. Bitcoin, the primary force behind all this has been bubbling away there for years - there have been fits and starts perhaps - but over the past what two or three years, cryptocurrencies,blockchains, and distributed ledger technologies seem to have built to some kind of unstoppable force.
 
 Seem to.  Not _have built_ into an unstoppable force, but _seem to have built_.
 
@@ -50,9 +50,11 @@ Today, together, we can smash the blockchain snowball.
 --
 I got a couple of people to look over my proposal before I submitted it. They were generally positive, although one comment I got was _I wouldn't ever go for such a click baity title_.
 
+Well, you know the old aphorism about presentations - tell'em what you're gonna tell 'em, tell'em, tell'em what you've just told 'em? Here's what I'm gonna now tell you.
+
 Snakes Into Snake Oil.
 
-I didn't want anybody coming along today think I was going to tell you how cryptocurrencies were the future of money, or if you just hodl long enough you'll be driving a lambo, or how the blockchain is going to revolutionise Ubers, or something.
+I didn't want anybody coming along today think I was going to tell you how cryptocurrencies were the future of money, or if you just hodl long enough you'll be driving a lambo, or how the blockchain is going to revolutionise Ubers, or any thing like that.
 
 First, I'm going to talk about what blockchains are.
 
