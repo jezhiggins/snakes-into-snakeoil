@@ -1,7 +1,78 @@
-== What?
+// What are Blockchains?
+== !
 
-* What are blockchains?
+BITCOIN!
 
-* What are cryptocurrencies?
+[NOTE.speaker]
+--
+I'm going to go through the technology of blockchains - how the different pieces fit together, and so on.
 
-* But why?
+So, before we get into the how, let's consider the why?
+
+While the pre-history of blockchains goes back further - very little of the techniques used are particularly new or novel - in the world we live in now, the interest in blockchains is driven by cryptocurrencies, and the interest in cryptocurrencies is driven by Bitcoin. So why Bitcoin?
+--
+// Money is a pain
+== !
+
+[quote, David Gerard, Attack of the Fifty Foot Blockchain]
+--
+Paper notes and metal coins are annoying and inconvenient, and we have the Internet now. So digital money sounds like a useful idea.
+--
+
+[NOTE.speaker]
+--
+Seems fair, right?
+
+There had been various attempts to design digital money systems. David Chaum first proposed it in papers published in 1982 and 1985, and in 1990 he founded DigiCash to try and put his ideas into practice. It didn't catch on and closed in 1998. One of the reasons you've heard lots about Bitcoin and not a great deal about DigiCash is because DigiCash served a similar role to a bank. It confirmed identities and that yes, they really did have that money to give to you.
+
+Among the bright young Silicon Valley movers and shakers, that just didn't fly.
+--
+// You're not the Boss of me!
+== !
+
+YOU'RE NOT THE BOSS OF ME
+
+[NOTE.speaker]
+--
+In these modern times, we're very aware of that Silicon Valley (and I use that as something of a shorthand) is riddled with people who hold what generously be described as 'unfortunate' political beliefs. We think of this as a modern phenomenon. The Silicon Valley of the past has seemed fun and hippyish - everybody loves Woz right? - but it was ever thus.
+
+The prime movers in the search for electronic cash come from a libertarian anarcho-capitalist strand of thought that, I think, most of us would regard with horror. In particular, it regards government oversight (or as they would probably put it - unjustified government interference) as a threat and something to be worked around, undermined, and avoided.
+
+PayPal was explicitly founded as an anonymous money-transfer channel operating outside government regulation. Of course, Thiel changed tack as soon as he realised that being side the tent pissing in was going to be far less profitable that being inside the tent pissing all over the floor.
+
+Anyway, prior to Bitcoin, there had been a number of attempts at electronic cash. A guy called Nick Szabo proposed a thing called Bitgold, while Wei Dai described b-money, back in 1998. However, they didn't have implementations - they were, at least at the time, all talk and no trousers.
+
+One of the things these proposals foundered on was the double-spend problem. If you want to avoid government oversight, then you can't have any kind of central authority in your system because, you know, that gives that pesky government a regulatory hook point and before you know it they'll be asking you to pay tax and operate as at least a partially functioning member of society. However, if you don't have that central authority, what's to stop me spending £10 with you over here and the very same £10 with you over there, high-tailing it with the goods and stiffing one and/or both of you?
+
+Bitcoin, as a system, was described in a "white paper" published in October 2008 on a Cypherpunks mailing list by someone calling themselves Satoshi Nakamoto. They release version 0.1 of the software implementing their system in January 2009.
+
+And it's all been downhill from there.
+--
+// Bitcoin: A Peer-to-Peer Electronic Cash System
+== !
+
+[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]
+--
+A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one part to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network.
+--
+
+[NOTE.speaker]
+--
+The double-spending problem solved? Without a central authority?
+
+This stuff could be gold!
+--
+// Bitcoin: A Peer-to-Peer Electronic Cash System
+== !
+
+[quote]
+--
+The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as a majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the chain and outpace the attackers. The network itself requires minimal structure. Messages are broadcast on a best effort basis, and nodes can leave and join the network at will, accepting the longest proof-of-work chain as proof of what happened while they were gone.
+--
+
+[NOTE.speaker]
+--
+They continue ...
+
+That sounds ok, I guess?
+--

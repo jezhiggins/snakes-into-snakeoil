@@ -19,7 +19,7 @@ Anyway, this year, for this conference, I thought about things a lot.  A hell of
 
 No, I gave it a lot of thought because ...
 --
-
+// hmm
 == !
 
 ____
@@ -39,7 +39,8 @@ Seem to.  Not _have built_ into an unstoppable force, but _seem to have built_.
 Today, together, we can smash the blockchain snowball.
 --
 
-== Snakes Into Snake Oil
+// Snakes Into Snake Oil
+== !
 
 [%step]
 * What Blockchains Are
