@@ -61,6 +61,8 @@ A purely peer-to-peer version of electronic cash would allow online payments to 
 The double-spending problem solved? Without a central authority?
 
 This stuff could be gold!
+
+They continue ...
 --
 // Bitcoin: A Peer-to-Peer Electronic Cash System
 == !
@@ -72,7 +74,5 @@ The network timestamps transactions by hashing them into an ongoing chain of has
 
 [NOTE.speaker]
 --
-They continue ...
-
 That sounds ok, I guess?
 --
