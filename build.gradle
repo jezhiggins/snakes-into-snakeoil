@@ -5,7 +5,7 @@ buildscript {
 }
 
 plugins {
-  id 'org.asciidoctor.convert' version '1.5.7'
+  id 'org.asciidoctor.convert' version '1.5.8.1'
 }
 
 
@@ -14,6 +14,10 @@ ext {
 }
 
 version = "1.0"
+
+asciidoctorj {
+    version = '1.5.5'
+}
 
 asciidoctor {
     requires 'asciidoctor-diagram'
@@ -35,10 +39,12 @@ asciidoctor {
 
     backends 'revealjs'
 
-    options template_dirs : [ revealjsTemplateDir.absolutePath ],
+    options \
+      template_dirs : [ revealjsTemplateDir.absolutePath ],
       partition : true
 
-    attributes 'source-highlighter': 'coderay',
+    attributes \
+      'source-highlighter': 'coderay',
       'asciidoctorj' : asciidoctorj.version,
       'imagesoutdir' : file("${outputDir}/revealjs/images").absolutePath,
       'imagesdir'    : 'images'
