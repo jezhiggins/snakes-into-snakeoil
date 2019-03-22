@@ -1,5 +1,3 @@
-= Snakes Into Snake Oil
-
 :revealjs_center: false
 :revealjs_progress: false
 
