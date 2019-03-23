@@ -45,15 +45,13 @@ Today, together, we can smash the blockchain snowball.
 [%step]
 * What Blockchains Are
 
-* And Why They're Terrible
+* Why They're Terrible
 
 [NOTE.speaker]
 --
 I got a couple of people to look over my proposal before I submitted it. They were generally positive, although one comment I got was _I wouldn't ever go for such a click baity title_.
 
 Well, you know the old aphorism about presentations - tell'em what you're gonna tell 'em, tell'em, tell'em what you've just told 'em? Here's what I'm gonna now tell you.
-
-Snakes Into Snake Oil.
 
 I didn't want anybody coming along today think I was going to tell you how cryptocurrencies were the future of money, or if you just hodl long enough you'll be driving a lambo, or how the blockchain is going to revolutionise Ubers, or any thing like that.
 

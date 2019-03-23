@@ -1,6 +1,50 @@
 == Building A Blockchain
 
-* Linked lists
+[NOTE.speaker]
+--
+So let's build a blockchain.
+--
+
+=== !
+
+[ditaa, "linked-list", "svg"]
+--
++---------------+   +---------------+   +---------------+
+|+--------+----+|   |+--------+----+|   |+--------+----+|
+||        |    ||   ||        |    ||   ||        |    ||
+||   A    |    ||-->||   B    |    ||-->||   C    |    ||-->NULL
+||        |    ||   ||        |    ||   ||        |    ||
+|+--------+----+|   |+--------+----+|   |+--------+----+|
++---------------+   +---------------+   +---------------+
+--
+
+[NOTE.speaker]
+--
+A linked list - a singly linked list - it doesn't get much simpler than that.
+
+Start at the head, traverse the pointers, add things onto the end. Easy-peasy.
+--
+
+=== !
+
+[ditaa, "reverse-linked-list", "svg"]
+--
++---------------+   +---------------+   +---------------+
+|+--------+----+|   |+--------+----+|   |+--------+----+|
+||        |    ||   ||        |    ||   ||        |    ||
+||   A    |    ||<--||   B    |    ||<--||   C    |    ||<--NULL
+||        |    ||   ||        |    ||   ||        |    ||
+|+--------+----+|   |+--------+----+|   |+--------+----+|
++---------------+   +---------------+   +---------------+
+--
+
+[NOTE.speaker]
+--
+OK, so first we're going to traverse the list in the other direction ...
+
+Generally, of course, when we talk about a linked list, it's all in memory right, so these are pointers to chunks to chunks of memory.
+--
+
 
 * Hash pointers
 
@@ -8,7 +52,7 @@
 
 * 'Transactions'
 
-* Distribute ledgers
+* Distributed ledgers
 
 * Consensus mechanisms
 ** Proof-of-work

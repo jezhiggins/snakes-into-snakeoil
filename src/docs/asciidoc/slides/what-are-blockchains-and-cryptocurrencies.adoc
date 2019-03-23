@@ -1,7 +1,4 @@
-// What are Blockchains?
-== !
-
-BITCOIN!
+== Snakes Into Snake Oil
 
 [NOTE.speaker]
 --
@@ -9,8 +6,9 @@ I'm going to go through the technology of blockchains - how the different pieces
 
 So, before we get into the how, let's consider the why?
 
-While the pre-history of blockchains goes back further - very little of the techniques used are particularly new or novel - in the world we live in now, the interest in blockchains is driven by cryptocurrencies, and the interest in cryptocurrencies is driven by Bitcoin. So why Bitcoin?
+While the pre-history of blockchains goes back further - very few of the techniques used are particularly new or novel - in the world we live in now, today, the interest in blockchains is driven by cryptocurrencies, and the interest in cryptocurrencies is driven by Bitcoin. So why Bitcoin?
 --
+
 // Money is a pain
 == !
 
@@ -21,9 +19,17 @@ Paper notes and metal coins are annoying and inconvenient, and we have the Inter
 
 [NOTE.speaker]
 --
+"Paper notes and metal coins are annoying and inconvenient, and we have the Internet now. So digital money sounds like a useful idea."
+
 Seems fair, right?
 
-There had been various attempts to design digital money systems. David Chaum first proposed it in papers published in 1982 and 1985, and in 1990 he founded DigiCash to try and put his ideas into practice. It didn't catch on and closed in 1998. One of the reasons you've heard lots about Bitcoin and not a great deal about DigiCash is because DigiCash served a similar role to a bank. It confirmed identities and that yes, they really did have that money to give to you.
+We do everything else on the internet! Why not money! Everything's so quick and easy on the Internet! Why can't I just download money?
+
+[maybe a bit of a digital currency exercise here]
+
+In addition to the payment services offered by banks, building societies and so on, there had been various attempts to design digital money systems but none of them of gained any particular traction.
+
+[something about banks?]
 
 Among the bright young Silicon Valley movers and shakers, that just didn't fly.
 --
