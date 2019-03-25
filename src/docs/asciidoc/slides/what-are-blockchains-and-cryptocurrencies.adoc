@@ -2,9 +2,7 @@
 
 [NOTE.speaker]
 --
-I'm going to go through the technology of blockchains - how the different pieces fit together, and so on.
-
-So, before we get into the how, let's consider the why?
+We've looked at the how of a blockchain, now we need to consider the why.
 
 While the pre-history of blockchains goes back further - very few of the techniques used are particularly new or novel - in the world we live in now, today, the interest in blockchains is driven by cryptocurrencies, and the interest in cryptocurrencies is driven by Bitcoin. So why Bitcoin?
 --
