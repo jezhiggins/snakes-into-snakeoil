@@ -32,11 +32,11 @@ Well, not really, but I'm sure I'm can handle it. (Also old, white, bearded mean
 
 As you know, we in software, even more so than society at large, as absolute fools for fashion and for hype. Some technologies appear as out of nowhere - we all woke up one morning and NoSQL databases were on trend. Other things snowball, sometimes over years or even decades, until the hype cycle become some overwhelming it forces you to give it attention. Python is perhaps one example. Functional programming :) Growing since the 50s, now everywhere :)
 
-Blockchain technology seems to me like a snowballer. Bitcoin, the primary force behind all this has been bubbling away there for years - there have been fits and starts perhaps - but over the past what two or three years, cryptocurrencies,blockchains, and distributed ledger technologies seem to have built to some kind of unstoppable force.
+Blockchain technology seems to me like a snowballer. Bitcoin, the primary force behind all this has been bubbling away there for years - there have been fits and starts perhaps - but over the past what two or three years, cryptocurrencies,blockchains, and distributed ledger technologies seem to have built to some kind of unignorable force.
 
-Seem to.  Not _have built_ into an unstoppable force, but _seem to have built_.
+Seem to.  Not _have built_ into an unignorable force, but _seem to have built_.
 
-Today, together, we can smash the blockchain snowball.
+Hopefully, at the end of this session, we'll know enough to all be able to happily ignore it.
 --
 
 // Snakes Into Snake Oil

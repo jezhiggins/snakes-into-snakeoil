@@ -2,9 +2,9 @@
 
 [NOTE.speaker]
 --
-Usually when we describe a solution to a problem, we at least attempt to outline the problem first.  Even if we jsut confine ourselves to Bitcoin, as it was the first cryptocurrency, and thus the cause of all this nonense, it's still rather difficult to know what problem it's solving. Some people will tell you that one day we'll all be using Bitcoin for all our purchases, from a cup of coffee to a Lambogini. Other people will tell you that Bitcoin was only ever intended as a "store of value". Yet others will tell you it's about "banking the unbanked", bringing modern-day financial services to developing countries or some other white-saviour bullshit.
+Usually when we describe a solution to a problem, we at least attempt to outline the problem first.  Even if we just confine ourselves to Bitcoin, as it was the first cryptocurrency, and thus the cause of all this nonense, it's still rather difficult to know what problem it's solving. Some people will tell you that one day we'll all be using Bitcoin for all our purchases, from a cup of coffee to a Lamborghini. Other people will tell you that Bitcoin was only ever intended as a "store of value". Yet others will tell you it's about "banking the unbanked", bringing modern-day financial services to developing countries or some other white-saviour bullshit.
 
-They all lean on the same software though, so let's look at what they do agree on.
+They all use on the same software though, so let's use that look at what they do agree on.
 --
 
 == !
@@ -13,28 +13,28 @@ They all lean on the same software though, so let's look at what they do agree o
 --
     +----------------------+  +----------------------+  +----------------------+
     |       Block N˗1      |  |       Block N        |  |      Block N+1       |
-    | +--------+ +--------+|  | +--------+ +--------+|  | +--------+ +--------+|
-    | |prevHash| |  time  ||  | |prevHash| |  time  ||  | |prevHash| |  time  ||
-    | +--------+ +--------+|  | +--------+ +--------+|  | +--------+ +--------+|
+    |    +------------+    |  |    +------------+    |  |    +------------+    |
+    |    | time stamp |    |  |    | time stamp |    |  |    | time stamp |    |
+    |    +------------+    |  |    +------------+    |  |    +------------+    |
  <==|                      |<-|                      |<-|                      |<==
-    | +--------+ +--------+|  | +--------+ +--------+|  | +--------+ +--------+|
-    | |  data  | | nonce  ||  | |  data  | | nonce  ||  | |  data  | | nonce  ||
-    | +--------+ +--------+|  | +--------+ +--------+|  | +--------+ +--------+|
-    |                      |  |     ^                |  |                      |
-    +----------------------+  +---+-+--+-------------+  +----------------------+
-                                    |
-                                    |
-                                  /---\
-                             /--->|   |<---\
-                             |    \---/    |
-                           /---\         /---\
-                      /--->|   |         |   |<-=-\
-                      |    \---/         \---/    |
-                      |      ^             ^      |
-                      |      |             |
-                    /---\  /---\         /---\
-               /-=->|   |  |   |<-=-\    |   |
-               |    \---/  \---/    |    \---/
+    |      +--------+      |  |      +--------+      |  |      +--------+      |
+    |      |  data  |      |  |      |  data  |      |  |      +  data  +      |
+    |      +--------+      |  |      +--------+      |  |      +--------+      |
+    |                      |  |          ^           |  |                      |
+    +----------------------+  +----------+-----------+  +----------------------+
+                                         |
+                                         |
+                                       /---\
+                                  /--->|   |<---\
+                                  |    \---/    |
+                                /---\         /---\
+                           /--->|   |         |   |<-=-\
+                           |    \---/         \---/    |
+                           |      ^             ^      |
+                           |      |             |
+                         /---\  /---\         /---\
+                    /-=->|   |  |   |<-=-\    |   |
+                    |    \---/  \---/    |    \---/
 
 --
 
@@ -147,46 +147,109 @@ So let's build a blockchain.
 
 [ditaa, "linked-list", "svg"]
 --
-+---------------+   +---------------+   +---------------+
-|+--------+----+|   |+--------+----+|   |+--------+----+|
-||        |    ||   ||        |    ||   ||        |    ||
-||   A    |    ||-->||   B    |    ||-->||   C    |    ||-->NULL
-||        |    ||   ||        |    ||   ||        |    ||
-|+--------+----+|   |+--------+----+|   |+--------+----+|
-+---------------+   +---------------+   +---------------+
++--------------+   +--------------+   +--------------+
+|+-------+----+|   |+-------+----+|   |+-------+----+|
+||       |    ||   ||       |    ||   ||       |    ||
+||   A   |    ||-->||   B   |    ||-->||   C   |    ||-->NULL
+||       |    ||   ||       |    ||   ||       |    ||
+|+-------+----+|   |+-------+----+|   |+-------+----+|
++--------------+   +--------------+   +--------------+
 --
 
 [NOTE.speaker]
 --
-A linked list - a singly linked list - it doesn't get much simpler than that.
+Let's start with this, a singly-linked list.
 
 Start at the head, traverse the pointers, add things onto the end. Easy-peasy.
+
+Hmm - this looks a bit like the picture we just looked at.
+
+
+What if, instead of pointing forwards, we swap those pointers around so each element points to its predecessor.
 --
 
 === !
 
 [ditaa, "reverse-linked-list", "svg"]
 --
-+---------------+   +---------------+   +---------------+
-|+--------+----+|   |+--------+----+|   |+--------+----+|
-||        |    ||   ||        |    ||   ||        |    ||
-||   A    |    ||<--||   B    |    ||<--||   C    |    ||<--NULL
-||        |    ||   ||        |    ||   ||        |    ||
-|+--------+----+|   |+--------+----+|   |+--------+----+|
-+---------------+   +---------------+   +---------------+
+       +--------------+   +--------------+   +--------------+
+       |+----+-------+|   |+----+-------+|   |+----+-------+|
+       ||    |       ||   ||    |       ||   ||    |       ||
+NULL<--||    |   A   ||<--||    |   B   ||<--||    |   C   ||
+       ||    |       ||   ||    |       ||   ||    |       ||
+       |+----+-------+|   |+----+-------+|   |+----+-------+|
+       +--------------+   +--------------+   +--------------+
 --
 
 [NOTE.speaker]
 --
-OK, so first we're going to traverse the list in the other direction ...
+There we go. That looks more like it, right?
 
-Generally, of course, when we talk about a linked list, it's all in memory right, so these are pointers to chunks to chunks of memory.
+Generally, of course, when we talk about a linked list, the list is in memory and the pointers are memory addresses.  I am here, I need to go to this memory address for the next element, and that will tell me the address of the next element, and so on.
+
+On our blockchain, that's not going to fly. We don't have them in memory, instead we're downloading chunks of data from internet randos. Could be anything.
+
+Instead, we use a "hash pointer".  A hash point is a little data structure that points to where some information is stored somewhere, together with a hash value of that information.
 --
 
+=== !
 
-* Hash pointers
+* the block before me is block 742
 
-* Merkle trees
+[NOTE.speaker]
+--
+So here, instead of a bare pointer (the block before me is block 742)
+--
+
+=== !
+
+* the block before me is block 742
+* and its hash is 0x371291a...
+
+[NOTE.speaker]
+--
+So here, instead of a bare pointer (the block before me is block 742), we'd use a hash pointer (the before me is block 742 and its hash is 0x371291a....)
+
+This immediately allows us to verify that information hasn't been changed.  If I offer you block 742 and it doesn't hash to proper value, we immediately know something's amiss.
+
+Is it clear why?
+--
+
+=== !
+
+[ditaa, "hash-linked-list", "svg"]
+--
+    +----------------------+  +----------------------+  +----------------------+
+    | +--------+           |  | +--------+           |  | +--------+           |
+    | |prevHash|           |  | |prevHash|           |  | |prevHash|
+    | +--------+           |  | +--------+           |  | +--------+           |
+    |                      |  |                      |  |                      |
+ <==|                      |<-|                      |<-|                      |<==
+    |                      |  |      +--------+      |  |                      |
+    |                      |  |      |  data  |      |  |                      |
+    |                      |  |      +--------+      |  |                      |
+    |                      |  |                      |  |                      |
+    +----------------------+  +----------+-----------+  +----------------------+
+--
+
+[NOTE.speaker]
+--
+So there we are, we have our lovely tamper-proof chain of blocks.
+
+Plenty of room for our data, our transactions, to rattle around in there.
+
+Let's have a think about that.  Our data is a set of transactions - Alice pays Bob, Bob pays Charlie, and so on.  Whether we think about that as monetary transactions or as database transactions, I think we can agree, order is important.
+
+We could use another list, I suppose, but instead we use a tree.
+--
+
+=== !
+
+*  Merkle trees
+
+
+
+=== !
 
 * 'Transactions'
 
