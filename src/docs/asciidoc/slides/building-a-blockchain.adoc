@@ -2,12 +2,15 @@
 
 [NOTE.speaker]
 --
-Usually when we describe a solution to a problem, we at least attempt to outline the problem first.  Even if we just confine ourselves to Bitcoin, as it was the first cryptocurrency, and thus the cause of all this nonense, it's still rather difficult to know what problem it's solving. Some people will tell you that one day we'll all be using Bitcoin for all our purchases, from a cup of coffee to a Lamborghini. Other people will tell you that Bitcoin was only ever intended as a "store of value". Yet others will tell you it's about "banking the unbanked", bringing modern-day financial services to developing countries or some other white-saviour bullshit.
+Usually when we describe a solution to a problem, we at least attempt to outline the problem first.
+
+Even if we just confine ourselves to Bitcoin, as it was the first cryptocurrency, and thus the cause of all this nonsense, it's still rather difficult to know what problem it's solving. Some people will tell you that one day we'll all be using Bitcoin for all our purchases, from a cup of coffee to a Lamborghini. Other people will tell you that Bitcoin was only ever intended as a "store of value". Yet others will tell you it's about "banking the unbanked", bringing modern-day financial services to developing countries or some other white-saviour bullshit.
 
 They all use on the same software though, so let's use that look at what they do agree on.
 --
 
-== !
+[%notitle, data-transition=none]
+== The Shape Of The Chain
 
 [ditaa, "shape-of-the-chain","svg"]
 --
@@ -42,16 +45,17 @@ They all use on the same software though, so let's use that look at what they do
 --
 They agree that this is what a blockchain looks like.
 
-Data is organised into blocks, and those blocks are organised into a chain.  We call it a chain because once we accept a block onto the chain it's fixed in place.  We can't move it around - we can't chain its position or its contents.
+Data is organised into blocks, and those blocks are organised into a chain.  We call it a chain because once we accept a block onto the chain it's fixed in place.  We can't move it around - we can't change its position or its contents.
 
 The data in the blockchain is made up of transactions.  That's transaction in the sense of a database transaction - it's an atomic operation that either succeeds or doesn't happen at all. It's also, given that we're usually talking about crypto-currencies, often a transaction in the sense that person A is given person B "money".
 
-So a block contains a load of transactions, the timestamp when it was created, the hash value of the previous block, and some nonce value.  We'll come to the where's and why's of all these in just a moment, but you might already be able to see why this structure provides the behaviours everyone agrees on.
+So a block contains a load of transactions, the timestamp when it was created, and which block it is.  Because it knows which block it is, by definition it must know the block before.
 
 This is the general shape for all blockchains and cryptocurrencies, and then little section applies generally too. There are, as ever, one or two exceptions each time - it's not worth going into those, except to note that they exist their main effect it to fuel "why suchandsuch is the crypto to watch" type articles.
 --
 
-== !
+[data-transition=none, %notitle]
+== Append Only
 
 image::shape-of-the-chain.svg[]
 
@@ -69,7 +73,8 @@ The only way to add further data it to include in a subsequently block.
 We can see, pretty naturally then, that blockchains are append only.
 --
 
-== !
+[data-transition=none, %notitle]
+== Guaranteed Provenance
 
 image::shape-of-the-chain.svg[]
 
@@ -93,7 +98,8 @@ When you send a transaction, you sign it with your public key.  Consequently we 
 We can, therefore, track every transaction made by a particular address. That's how we know how many Bitcoins you own :)  We walk the entire ledger, the whole history of the chain, looking for transactions involving your address, either as signer or recipient.
 --
 
-== !
+[data-transition=none, %notitle]
+== Distributed
 
 image::shape-of-the-chain.svg[]
 
@@ -114,7 +120,8 @@ Blockchains and cryptocurrencies run as peer-to-peer networks. For each node in 
 They're not very good distributed databases in some senses - the read speed is dreadful and the write speed just appalling - but they're are definitely very, very distributed.
 --
 
-== !
+[data-transition=none, %notitle]
+== No Central Authority
 
 image::shape-of-the-chain.svg[]
 
@@ -147,13 +154,15 @@ So let's build a blockchain.
 
 [ditaa, "linked-list", "svg"]
 --
-+--------------+   +--------------+   +--------------+
-|+-------+----+|   |+-------+----+|   |+-------+----+|
-||       |    ||   ||       |    ||   ||       |    ||
-||   A   |    ||-->||   B   |    ||-->||   C   |    ||-->NULL
-||       |    ||   ||       |    ||   ||       |    ||
-|+-------+----+|   |+-------+----+|   |+-------+----+|
-+--------------+   +--------------+   +--------------+
+
++---------------+   +---------------+   +---------------+
+|+-------+ +---+|   |+-------+ +---+|   |+-------+ +---+|
+||       | |   ||   ||       | |   ||   ||       | |   ||
+||   A   | |ptr||-->||   B   | |ptr||-->||   C   | |ptr||--> NULL
+||       | |   ||   ||       | |   ||   ||       | |   ||
+|+-------+ +---+|   |+-------+ +---+|   |+-------+ +---+|
++---------------+   +---------------+   +---------------+
+
 --
 
 [NOTE.speaker]
@@ -172,14 +181,21 @@ What if, instead of pointing forwards, we swap those pointers around so each ele
 
 [ditaa, "reverse-linked-list", "svg"]
 --
-       +--------------+   +--------------+   +--------------+
-       |+----+-------+|   |+----+-------+|   |+----+-------+|
-       ||    |       ||   ||    |       ||   ||    |       ||
-NULL<--||    |   A   ||<--||    |   B   ||<--||    |   C   ||
-       ||    |       ||   ||    |       ||   ||    |       ||
-       |+----+-------+|   |+----+-------+|   |+----+-------+|
-       +--------------+   +--------------+   +--------------+
+
+        +---------------+   +---------------+   +---------------+
+        |+---+ +-------+|   |+---+ +-------+|   |+---+ +-------+|
+        ||   | |       ||   ||   | |       ||   ||   | |       ||
+NULL <--||ptr| |   A   ||<--||ptr| |   B   ||<--||ptr| |   C   ||
+        ||   | |       ||   ||   | |       ||   ||   | |       ||
+        |+---+ +-------+|   |+---+ +-------+|   |+---+ +-------+|
+        +---------------+   +---------------+   +---------------+
+
 --
+
+[%step]
+* the block before me is block 742
+* and its hash is 0x371291a...
+
 
 [NOTE.speaker]
 --
@@ -190,24 +206,7 @@ Generally, of course, when we talk about a linked list, the list is in memory an
 On our blockchain, that's not going to fly. We don't have them in memory, instead we're downloading chunks of data from internet randos. Could be anything.
 
 Instead, we use a "hash pointer".  A hash point is a little data structure that points to where some information is stored somewhere, together with a hash value of that information.
---
 
-=== !
-
-* the block before me is block 742
-
-[NOTE.speaker]
---
-So here, instead of a bare pointer (the block before me is block 742)
---
-
-=== !
-
-* the block before me is block 742
-* and its hash is 0x371291a...
-
-[NOTE.speaker]
---
 So here, instead of a bare pointer (the block before me is block 742), we'd use a hash pointer (the before me is block 742 and its hash is 0x371291a....)
 
 This immediately allows us to verify that information hasn't been changed.  If I offer you block 742 and it doesn't hash to proper value, we immediately know something's amiss.
@@ -219,17 +218,17 @@ Is it clear why?
 
 [ditaa, "hash-linked-list", "svg"]
 --
-    +----------------------+  +----------------------+  +----------------------+
-    | +--------+           |  | +--------+           |  | +--------+           |
-    | |prevHash|           |  | |prevHash|           |  | |prevHash|
-    | +--------+           |  | +--------+           |  | +--------+           |
-    |                      |  |                      |  |                      |
- <==|                      |<-|                      |<-|                      |<==
-    |                      |  |      +--------+      |  |                      |
-    |                      |  |      |  data  |      |  |                      |
-    |                      |  |      +--------+      |  |                      |
-    |                      |  |                      |  |                      |
-    +----------------------+  +----------+-----------+  +----------------------+
+    +----------------------+   +----------------------+   +----------------------+
+    | +--------+           |   | +--------+           |   | +--------+           |
+    | |prevHash|           |   | |prevHash|           |   | |prevHash|           |
+    | +--------+           |   | +--------+           |   | +--------+           |
+    |                      |   |                      |   |                      |
+ <==|                      |<--|                      |<--|                      |<==
+    |                      |   |      +---=----+      |   |                      |
+    |                      |   |      |  data  |      |   |                      |
+    |                      |   |      +--------+      |   |                      |
+    |                      |   |                      |   |                      |
+    +----------------------+   +----------------------+   +----------------------+
 --
 
 [NOTE.speaker]
@@ -240,14 +239,88 @@ Plenty of room for our data, our transactions, to rattle around in there.
 
 Let's have a think about that.  Our data is a set of transactions - Alice pays Bob, Bob pays Charlie, and so on.  Whether we think about that as monetary transactions or as database transactions, I think we can agree, order is important.
 
-We could use another list, I suppose, but instead we use a tree.
+We could use another list, I suppose, but, as I've already hinted, instead we use a tree.
 --
 
-=== !
+[%notitle]
+=== Trees
 
-*  Merkle trees
+[ditaa, "tree","svg"]
+--
+             /------------\
+             |            |
+         /---|            |---\
+         |   |            |   |
+         |   \------------/   |
+         v                    v
+ /------------\         /------------\
+ |            |         |            |
+ |            |         |            |
+ |            |         |            |
+ \------------/         \------------/
+   |        |             |        |
+   v        v             v        v
+/----\    /----\       /----\    /----\
+|    |    |    |       |    |    |    |
+\----/    \----/       \----/    \----/
+--
 
+[NOTE.speaker]
+--
+So here's a lovely tree.  This is a poorly drawn binary tree, which like all computer sciences tree grows down from the root, but I'm sure you know what a nicely drawn one looks like :)
 
+We start at the root node, which has a couple of pointers to the two subtrees underneath it, and they have two pointers to their subtrees and so on, until we hit the leaf nodes.
+
+In the same way as we applied them our our list, we're going to apply the hash pointers to our tree as well.
+--
+
+[%notitle]
+=== Merkle Trees
+
+[ditaa, "merkle-tree","svg"]
+--
+             /------------\
+             |            |
+         /---|h(12)  h(34)|---\
+         |   |            |   |
+         |   \------------/   |
+         v                    v
+ /------------\         /------------\
+ |            |         |            |
+ | h(1)  h(2) |         | h(3)  h(4) |
+ |            |         |            |
+ \------------/         \------------/
+   |        |             |        |
+   v        v             v        v
+/----\    /----\       /----\    /----\
+| d1 |    | d2 |       | d3 |    | d4 |
+\----/    \----/       \----/    \----/
+--
+
+[NOTE.speaker]
+--
+Suppose we have some lumps of data - these lumps are the leaves of our tree. We can organise the lumps in pairs, then for each pair we build a little data structure that has two hash pointers, one for each of the blocks. These data structures are the next level of the tree.
+
+Then, like all good computer science problems, we recurse! We group the hash pairs into groups of two, and build another layer of hash pairs above that.  And so on and so on until we're down to a single block, the root node of the tree.
+
+This whole thing is a Merkle Tree, named for its inventor a chap called Ralph Merkle. A lifelong Californian Merkle studied at UC Berkley and then at Stanford in the 70s, was a cryptographer, developing an early example of public key cryptography while still a student, he actually invented cryptographic hashing, as well as these trees. More recently, he's taken that turn into full-on California white man wacko, "researching" cryonics, nanotechnology, and working at Ray Kurtzweil's Singularity University.  (Older audience members are probably more familiar with the work of his wife, Carol Shaw, who wrote Super Breakout and River Raid for the Atari 2600.)
+
+In the same way as the linked list, this makes the tree tamper proof.  If some of the data at the bottom gets jiggled around, the path of hashes to the root will fail.
+
+The also gives us proof-of-membership.  If I present a piece of data, and the hashes of the path to the root, we can quickly establish if this bit of data does actually live in this tree.
+--
+
+[%notitle]
+=== That's how it fits together
+
+image::shape-of-the-chain.svg[]
+
+[NOTE.speaker]
+--
+These hash-pointer powered lists and trees help explain how this all organised and how we can be confident the data we have is untampered with.
+
+However, it does nothing to tell us how the data got into the tree in the first place, or how the blocks are created.
+--
 
 === !
 
