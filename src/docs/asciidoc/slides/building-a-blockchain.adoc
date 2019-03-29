@@ -246,7 +246,7 @@ Let's have a think about that.  Our data is a set of transactions - Alice pays B
 We could use another list, I suppose, but, as I've already hinted, instead we use a tree.
 --
 
-[%notitle]
+[data-transition=none]
 == Trees
 
 [ditaa, "tree","svg"]
@@ -278,7 +278,7 @@ We start at the root node, which has a couple of pointers to the two subtrees un
 In the same way as we applied them our our list, we're going to apply the hash pointers to our tree as well.
 --
 
-[%notitle]
+[data-transition=none, %notitle]
 == Merkle Trees
 
 [ditaa, "merkle-tree","svg"]
@@ -324,8 +324,10 @@ image::shape-of-the-chain.svg[]
 These hash-pointer powered lists and trees help explain how this all organised and how we can be confident the data we have is untampered with.
 
 However, it does nothing to tell us how the data got into the tree in the first place, or how the blocks are created.
+
 --
 
+[data-transition=none]
 == Transactions
 
 image::peer-to-peer-network.svg[]
@@ -336,8 +338,45 @@ Blockchains operate as peer-to-peer networks. We're perhaps most familiar with t
 
 We have our peer-to-peer network - there are a number of nodes, and each node is talking to some, but not all all, of the other nodes. Everyone - every actual person - who's interacting with the network is doing so through one of these nodes.
 
-So, here I go, into my coffee shop with my cryptocurrency client under my arm to order up a disappointing coffee. The barista says "that'll be 99 coffeecoins please, guvnor" and now it's time! Time for me to send a transaction.
+So, here I go, into my coffee shop with my cryptocurrency client under my arm to order up a disappointing coffee. The barista says "that'll be some fraction of a bitcoin please, guvnor" and now it's time! Time for me to send a transaction.
+
+I whip out my bitcoin client, laboriously type in the length string of hex digits he gives as his address, unless he's fully modern and has, I don't know, a QR code for me to scan or something, enter the amount, and hit "SEND".  What happens now?
 --
+
+[data-transition=none]
+== Transactions
+
+image::sending-transaction.svg[]
+
+[data-transition=none]
+== Transactions
+
+image::transaction-one-node.svg[]
+
+[data-transition=none]
+== Transactions
+
+image::transaction-more-nodes.svg[]
+
+[data-transition=none]
+== Transactions
+
+image::transaction-and-so-on.svg[]
+
+[data-transition=none]
+== Transactions
+
+image::transactions-all-a-bit-different.svg[]
+
+[data-transition=none]
+== Transactions
+
+image::settle-down-everyone.svg[]
+
+[data-transition=none]
+== Transactions
+
+image::new-block-propagation.svg[]
 
 == Consensus
 
