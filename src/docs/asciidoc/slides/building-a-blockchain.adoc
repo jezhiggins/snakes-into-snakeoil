@@ -2,6 +2,8 @@
 
 [NOTE.speaker]
 --
+So, what is a blockchain?
+
 Usually when we describe a solution to a problem, we at least attempt to outline the problem first.
 
 Even if we just confine ourselves to Bitcoin, as it was the first cryptocurrency, and thus the cause of all this nonsense, it's still rather difficult to know what problem it's solving. Some people will tell you that one day we'll all be using Bitcoin for all our purchases, from a cup of coffee to a Lamborghini. Other people will tell you that Bitcoin was only ever intended as a "store of value". Yet others will tell you it's about "banking the unbanked", bringing modern-day financial services to developing countries or some other white-saviour bullshit.
@@ -47,11 +49,13 @@ They agree that this is what a blockchain looks like.
 
 Data is organised into blocks, and those blocks are organised into a chain.  We call it a chain because once we accept a block onto the chain it's fixed in place.  We can't move it around - we can't change its position or its contents.
 
+I've already used the term 'blockchain' and I've mentioned 'distributed ledger technologies - DLTs'. The two terms are essentially synonyms. DLT sounds a bit more "enterprisey", but they mean pretty much the same thing.
+
 The data in the blockchain is made up of transactions.  That's transaction in the sense of a database transaction - it's an atomic operation that either succeeds or doesn't happen at all. It's also, given that we're usually talking about crypto-currencies, often a transaction in the sense that person A is given person B "money".
 
 So a block contains a load of transactions, the timestamp when it was created, and which block it is.  Because it knows which block it is, by definition it must know the block before.
 
-This is the general shape for all blockchains and cryptocurrencies, and then little section applies generally too. There are, as ever, one or two exceptions each time - it's not worth going into those, except to note that they exist their main effect it to fuel "why suchandsuch is the crypto to watch" type articles.
+This is the general shape for all blockchains and cryptocurrencies, and then following section applies generally too. There are, as ever, one or two exceptions each time - it's not worth going into those, except to note that they exist and that their main effect it to fuel "why suchandsuch is the crypto to watch" type articles.
 --
 
 [data-transition=none, %notitle]
@@ -66,7 +70,7 @@ image::shape-of-the-chain.svg[]
 
 [NOTE.speaker]
 --
-Once we've gather up some data into a block, that block's closed and we can add anything more to it, nor can we change any of the contents.
+Once we've gather up some data into a block, that block's closed and we can't add anything more to it, nor can we change any of the contents.
 
 The only way to add further data it to include in a subsequently block.
 
@@ -91,7 +95,7 @@ image::shape-of-the-chain.svg[]
 --
 Each bit of data on the chain, each little blob here, isn't just a little message saying "send some playMoney to the pizza shop", it's a cryptographically signed little message saying "send some playMoney to the pizza shop".
 
-Your "user account" on a blockchain is usually referred to as your "address".  When you create your "address" on a blockchain, you're actually generating a key-pair, and you address is just the public key of that pair.  This is the "crypto" of cryptocurrency.
+Your "user account" on a blockchain is usually referred to as your "address".  When you create your "address" on a blockchain, you're actually generating a key-pair, and your address is just the public key of that pair.  This is the "crypto" of cryptocurrency.
 
 When you send a transaction, you sign it with your public key.  Consequently we know who, or at least which address, wrote which bit of data when.
 
@@ -150,7 +154,7 @@ Quite why this is the case is not, I'll grant you, immediately apparent from thi
 So let's build a blockchain.
 --
 
-=== !
+== !
 
 [ditaa, "linked-list", "svg"]
 --
@@ -177,7 +181,7 @@ Hmm - this looks a bit like the picture we just looked at.
 What if, instead of pointing forwards, we swap those pointers around so each element points to its predecessor.
 --
 
-=== !
+== !
 
 [ditaa, "reverse-linked-list", "svg"]
 --
@@ -205,7 +209,7 @@ Generally, of course, when we talk about a linked list, the list is in memory an
 
 On our blockchain, that's not going to fly. We don't have them in memory, instead we're downloading chunks of data from internet randos. Could be anything.
 
-Instead, we use a "hash pointer".  A hash point is a little data structure that points to where some information is stored somewhere, together with a hash value of that information.
+Instead, we use a "hash pointer".  A hash pointer is a little data structure that points to where some information is stored somewhere, together with a hash value of that information.
 
 So here, instead of a bare pointer (the block before me is block 742), we'd use a hash pointer (the before me is block 742 and its hash is 0x371291a....)
 
@@ -214,7 +218,7 @@ This immediately allows us to verify that information hasn't been changed.  If I
 Is it clear why?
 --
 
-=== !
+== !
 
 [ditaa, "hash-linked-list", "svg"]
 --
@@ -233,7 +237,7 @@ Is it clear why?
 
 [NOTE.speaker]
 --
-So there we are, we have our lovely tamper-proof chain of blocks.
+So there we are, we have our lovely tamper-proof chain of blocks, where each block contains the hash of its previous block (and, therefore, of all the blocks before that).
 
 Plenty of room for our data, our transactions, to rattle around in there.
 
@@ -243,7 +247,7 @@ We could use another list, I suppose, but, as I've already hinted, instead we us
 --
 
 [%notitle]
-=== Trees
+== Trees
 
 [ditaa, "tree","svg"]
 --
@@ -275,7 +279,7 @@ In the same way as we applied them our our list, we're going to apply the hash p
 --
 
 [%notitle]
-=== Merkle Trees
+== Merkle Trees
 
 [ditaa, "merkle-tree","svg"]
 --
@@ -311,7 +315,7 @@ The also gives us proof-of-membership.  If I present a piece of data, and the ha
 --
 
 [%notitle]
-=== That's how it fits together
+== That's how it fits together
 
 image::shape-of-the-chain.svg[]
 
@@ -322,7 +326,20 @@ These hash-pointer powered lists and trees help explain how this all organised a
 However, it does nothing to tell us how the data got into the tree in the first place, or how the blocks are created.
 --
 
-=== !
+== Transactions
+
+image::peer-to-peer-network.svg[]
+
+[NOTE.speaker]
+--
+Blockchains operate as peer-to-peer networks. We're perhaps most familiar with the idea of peer-to-peer networks from something like Bittorrent - a peer-to-peer network is something we grab data from, rather than write data too.
+
+We have our peer-to-peer network - there are a number of nodes, and each node is talking to some, but not all all, of the other nodes. Everyone - every actual person - who's interacting with the network is doing so through one of these nodes.
+
+So, here I go, into my coffee shop with my cryptocurrency client under my arm to order up a disappointing coffee. The barista says "that'll be 99 coffeecoins please, guvnor" and now it's time! Time for me to send a transaction.
+--
+
+== Consensus
 
 * 'Transactions'
 
