@@ -3,5 +3,14 @@ include::building-a-blockchain/lists-and-trees.adoc[]
 include::building-a-blockchain/transactions.adoc[]
 include::building-a-blockchain/consensus.adoc[]
 
-== And that's what block chains are.
+== And that's what blockchains are
 
+[NOTE.speaker]
+--
+Does that all make reasonable sense?
+
+Hopefully there's enough detail there for you to see how it all hangs together. I didn't want to get hung up on the precise details of hash function implementations or the ins-and-outs of the peer-to-peer protocol or anything like that, because it's not that important and would only get in the way.
+
+OK.
+
+--
