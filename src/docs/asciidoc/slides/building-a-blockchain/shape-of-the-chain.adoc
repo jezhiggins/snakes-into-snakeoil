@@ -1,0 +1,148 @@
+== Snakes Into Snake Oil
+
+[NOTE.speaker]
+--
+So, what is a blockchain?
+
+Usually when we describe a solution to a problem, we at least attempt to outline the problem first.
+
+Even if we just confine ourselves to Bitcoin, as it was the first cryptocurrency, and thus the cause of all this nonsense, it's still rather difficult to know what problem it's solving. Some people will tell you that one day we'll all be using Bitcoin for all our purchases, from a cup of coffee to a Lamborghini. Other people will tell you that Bitcoin was only ever intended as a "store of value". Yet others will tell you it's about "banking the unbanked", bringing modern-day financial services to developing countries or some other white-saviour bullshit.
+
+They all use on the same software though, so let's use that look at what they do agree on.
+--
+
+[%notitle, data-transition=none]
+== The Shape Of The Chain
+
+[ditaa, "shape-of-the-chain","svg"]
+--
+    +----------------------+   +----------------------+   +----------------------+
+    |       Block N˗1      |   |       Block N        |   |      Block N+1       |
+    |    +------------+    |   |    +------------+    |   |    +------------+    |
+    |    | time stamp |    |   |    | time stamp |    |   |    | time stamp |    |
+    |    +------------+    |   |    +------------+    |   |    +------------+    |
+ <==|                      |<--|                      |<--|                      |<==
+    |      +--------+      |   |      +--------+      |   |      +--------+      |
+    |      |  data  |      |   |      |  data  |      |   |      +  data  +      |
+    |      +--------+      |   |      +--------+      |   |      +--------+      |
+    |                      |   |          ^           |   |                      |
+    +----------------------+   +----------+-----------+   +----------------------+
+                                          |
+                                          |
+                                        /---\
+                                   /--->|   |<---\
+                                   |    \---/    |
+                                 /---\         /---\
+                            /--->|   |         |   |<-=-\
+                            |    \---/         \---/    |
+                            |      ^             ^      |
+                            |      |             |
+                          /---\  /---\         /---\
+                     /-=->|   |  |   |<-=-\    |   |
+                     |    \---/  \---/    |    \---/
+
+--
+
+[NOTE.speaker]
+--
+They agree that this is what a blockchain looks like.
+
+Data is organised into blocks, and those blocks are organised into a chain.  We call it a chain because once we accept a block onto the chain it's fixed in place.  We can't move it around - we can't change its position or its contents.
+
+I've already used the term 'blockchain' and I've mentioned 'distributed ledger technologies - DLTs'. The two terms are essentially synonyms. DLT sounds a bit more "enterprisey", but they mean pretty much the same thing.
+
+The data in the blockchain is made up of transactions.  That's transaction in the sense of a database transaction - it's an atomic operation that either succeeds or doesn't happen at all. It's also, given that we're usually talking about crypto-currencies, often a transaction in the sense that person A is given person B "money".
+
+So a block contains a load of transactions, the timestamp when it was created, and which block it is.  Because it knows which block it is, by definition it must know the block before.
+
+This is the general shape for all blockchains and cryptocurrencies, and then following section applies generally too. There are, as ever, one or two exceptions each time - it's not worth going into those, except to note that they exist and that their main effect it to fuel "why suchandsuch is the crypto to watch" type articles.
+--
+
+[data-transition=none, %notitle]
+== Append Only
+
+image::shape-of-the-chain.svg[]
+
+[cols=1, stripes=none, grid=none, frame=none]
+|===
+|append only
+|===
+
+[NOTE.speaker]
+--
+Once we've gather up some data into a block, that block's closed and we can't add anything more to it, nor can we change any of the contents.
+
+The only way to add further data it to include in a subsequently block.
+
+We can see, pretty naturally then, that blockchains are append only.
+--
+
+[data-transition=none, %notitle]
+== Guaranteed Provenance
+
+image::shape-of-the-chain.svg[]
+
+[cols=1, stripes=none, grid=none, frame=none]
+|===
+|append only
+|===
+[cols=1, stripes=none, grid=none, frame=none]
+|===
+|guarantees provenance
+|===
+
+[NOTE.speaker]
+--
+Each bit of data on the chain, each little blob here, isn't just a little message saying "send some playMoney to the pizza shop", it's a cryptographically signed little message saying "send some playMoney to the pizza shop".
+
+Your "user account" on a blockchain is usually referred to as your "address".  When you create your "address" on a blockchain, you're actually generating a key-pair, and your address is just the public key of that pair.  This is the "crypto" of cryptocurrency.
+
+When you send a transaction, you sign it with your public key.  Consequently we know who, or at least which address, wrote which bit of data when.
+
+We can, therefore, track every transaction made by a particular address. That's how we know how many Bitcoins you own :)  We walk the entire ledger, the whole history of the chain, looking for transactions involving your address, either as signer or recipient.
+--
+
+[data-transition=none, %notitle]
+== Distributed
+
+image::shape-of-the-chain.svg[]
+
+[cols=2, stripes=none, grid=none, frame=none]
+|===
+|append only
+|distributed database
+|===
+[cols=1, stripes=none, grid=none, frame=none]
+|===
+|guarantees provenance
+|===
+
+[NOTE.speaker]
+--
+Blockchains and cryptocurrencies run as peer-to-peer networks. For each node in the network to function, it needs a copy of all the data.  If you were to open up your laptops right now and install a Bitcoin client, the first thing it would do after it had connected to the network was start downloading the all the blocks in the Bitcoin block.  (Please don't - it will take weeks and achieve nothing.) However, each node needs a copy of the data, and so blockchains are distributed databases.
+
+They're not very good distributed databases in some senses - the read speed is dreadful and the write speed just appalling - but they're are definitely very, very distributed.
+--
+
+[data-transition=none, %notitle]
+== No Central Authority
+
+image::shape-of-the-chain.svg[]
+
+[cols=2, stripes=none, grid=none, frame=none]
+|===
+|append only
+|distributed database
+|===
+[cols=2, stripes=none, grid=none, frame=none]
+|===
+|guarantees provenance
+|no central authority
+|===
+
+[NOTE.speaker]
+--
+Blockchains can do this - provide append only distributed database with provenance guarantees - without relying on a central authority. There is no one at the heart of the network saying "yep, that's ok", "ooh no, don't like the look of that one".
+
+Quite why this is the case is not, I'll grant you, immediately apparent from this diagram but, please trust me, we'll come to it in a bit.
+--

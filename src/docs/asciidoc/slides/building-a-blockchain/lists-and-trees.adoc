@@ -1,0 +1,180 @@
+== Building A Blockchain
+
+[NOTE.speaker]
+--
+So let's build a blockchain.
+--
+
+== !
+
+[ditaa, "linked-list", "svg"]
+--
+
++---------------+   +---------------+   +---------------+
+|+-------+ +---+|   |+-------+ +---+|   |+-------+ +---+|
+||       | |   ||   ||       | |   ||   ||       | |   ||
+||   A   | |ptr||-->||   B   | |ptr||-->||   C   | |ptr||--> NULL
+||       | |   ||   ||       | |   ||   ||       | |   ||
+|+-------+ +---+|   |+-------+ +---+|   |+-------+ +---+|
++---------------+   +---------------+   +---------------+
+
+--
+
+[NOTE.speaker]
+--
+Let's start with this, a singly-linked list.
+
+Start at the head, traverse the pointers, add things onto the end. Easy-peasy.
+
+Hmm - this looks a bit like the picture we just looked at.
+
+
+What if, instead of pointing forwards, we swap those pointers around so each element points to its predecessor.
+--
+
+== !
+
+[ditaa, "reverse-linked-list", "svg"]
+--
+
+        +---------------+   +---------------+   +---------------+
+        |+---+ +-------+|   |+---+ +-------+|   |+---+ +-------+|
+        ||   | |       ||   ||   | |       ||   ||   | |       ||
+NULL <--||ptr| |   A   ||<--||ptr| |   B   ||<--||ptr| |   C   ||
+        ||   | |       ||   ||   | |       ||   ||   | |       ||
+        |+---+ +-------+|   |+---+ +-------+|   |+---+ +-------+|
+        +---------------+   +---------------+   +---------------+
+
+--
+
+[%step]
+* the block before me is block 742
+* and its hash is 0x371291a...
+
+
+[NOTE.speaker]
+--
+There we go. That looks more like it, right?
+
+Generally, of course, when we talk about a linked list, the list is in memory and the pointers are memory addresses.  I am here, I need to go to this memory address for the next element, and that will tell me the address of the next element, and so on.
+
+On our blockchain, that's not going to fly. We don't have them in memory, instead we're downloading chunks of data from internet randos. Could be anything.
+
+Instead, we use a "hash pointer".  A hash pointer is a little data structure that points to where some information is stored somewhere, together with a hash value of that information.
+
+So here, instead of a bare pointer (the block before me is block 742), we'd use a hash pointer (the before me is block 742 and its hash is 0x371291a....)
+
+This immediately allows us to verify that information hasn't been changed.  If I offer you block 742 and it doesn't hash to proper value, we immediately know something's amiss.
+
+Is it clear why?
+--
+
+== !
+
+[ditaa, "hash-linked-list", "svg"]
+--
+    +----------------------+   +----------------------+   +----------------------+
+    | +--------+           |   | +--------+           |   | +--------+           |
+    | |prevHash|           |   | |prevHash|           |   | |prevHash|           |
+    | +--------+           |   | +--------+           |   | +--------+           |
+    |                      |   |                      |   |                      |
+ <==|                      |<--|                      |<--|                      |<==
+    |                      |   |      +---=----+      |   |                      |
+    |                      |   |      |  data  |      |   |                      |
+    |                      |   |      +--------+      |   |                      |
+    |                      |   |                      |   |                      |
+    +----------------------+   +----------------------+   +----------------------+
+--
+
+[NOTE.speaker]
+--
+So there we are, we have our lovely tamper-proof chain of blocks, where each block contains the hash of its previous block (and, therefore, of all the blocks before that).
+
+Plenty of room for our data, our transactions, to rattle around in there.
+
+Let's have a think about that.  Our data is a set of transactions - Alice pays Bob, Bob pays Charlie, and so on.  Whether we think about that as monetary transactions or as database transactions, I think we can agree, order is important.
+
+We could use another list, I suppose, but, as I've already hinted, instead we use a tree.
+--
+
+[data-transition=none]
+== Trees
+
+[ditaa, "tree","svg"]
+--
+             /------------\
+             |            |
+         /---|            |---\
+         |   |            |   |
+         |   \------------/   |
+         v                    v
+ /------------\         /------------\
+ |            |         |            |
+ |            |         |            |
+ |            |         |            |
+ \------------/         \------------/
+   |        |             |        |
+   v        v             v        v
+/----\    /----\       /----\    /----\
+|    |    |    |       |    |    |    |
+\----/    \----/       \----/    \----/
+--
+
+[NOTE.speaker]
+--
+So here's a lovely tree.  This is a poorly drawn binary tree, which like all computer sciences tree grows down from the root, but I'm sure you know what a nicely drawn one looks like :)
+
+We start at the root node, which has a couple of pointers to the two subtrees underneath it, and they have two pointers to their subtrees and so on, until we hit the leaf nodes.
+
+In the same way as we applied them our our list, we're going to apply the hash pointers to our tree as well.
+--
+
+[data-transition=none, %notitle]
+== Merkle Trees
+
+[ditaa, "merkle-tree","svg"]
+--
+             /------------\
+             |            |
+         /---|h(12)  h(34)|---\
+         |   |            |   |
+         |   \------------/   |
+         v                    v
+ /------------\         /------------\
+ |            |         |            |
+ | h(1)  h(2) |         | h(3)  h(4) |
+ |            |         |            |
+ \------------/         \------------/
+   |        |             |        |
+   v        v             v        v
+/----\    /----\       /----\    /----\
+| d1 |    | d2 |       | d3 |    | d4 |
+\----/    \----/       \----/    \----/
+--
+
+[NOTE.speaker]
+--
+Suppose we have some lumps of data - these lumps are the leaves of our tree. We can organise the lumps in pairs, then for each pair we build a little data structure that has two hash pointers, one for each of the blocks. These data structures are the next level of the tree.
+
+Then, like all good computer science problems, we recurse! We group the hash pairs into groups of two, and build another layer of hash pairs above that.  And so on and so on until we're down to a single block, the root node of the tree.
+
+This whole thing is a Merkle Tree, named for its inventor a chap called Ralph Merkle. A lifelong Californian Merkle studied at UC Berkley and then at Stanford in the 70s, was a cryptographer, developing an early example of public key cryptography while still a student, he actually invented cryptographic hashing, as well as these trees. More recently, he's taken that turn into full-on California white man wacko, "researching" cryonics, nanotechnology, and working at Ray Kurtzweil's Singularity University.  (Older audience members are probably more familiar with the work of his wife, Carol Shaw, who wrote Super Breakout and River Raid for the Atari 2600.)
+
+In the same way as the linked list, this makes the tree tamper proof.  If some of the data at the bottom gets jiggled around, the path of hashes to the root will fail.
+
+The also gives us proof-of-membership.  If I present a piece of data, and the hashes of the path to the root, we can quickly establish if this bit of data does actually live in this tree.
+--
+
+[%notitle]
+== That's how it fits together
+
+image::shape-of-the-chain.svg[]
+
+[NOTE.speaker]
+--
+These hash-pointer powered lists and trees help explain how this all organised and how we can be confident the data we have is untampered with.
+
+However, it does nothing to tell us how the data got into the tree in the first place, or how the blocks are created.
+
+--
+

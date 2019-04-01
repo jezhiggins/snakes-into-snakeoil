@@ -1,0 +1,127 @@
+== Transactions
+
+image::bitcoin-coffee-prague.jpg[]
+
+[NOTE.speaker]
+--
+So, here I go, into my coffee shop with my cryptocurrency client under my arm to order up a disappointing coffee. The barista says "that'll be some fraction of a bitcoin please, guvnor" and now it's time! Time for me to send a transaction.
+
+This is a photo of a real place, by the way, Bitcoin Coffee in Prague, where the coffee is, apparently, very good, but you can only pay in Bitcoin.
+
+I whip out my bitcoin client, laboriously type in the lengthy string of hex digits he gives as his address, unless he's fully modern and has, I don't know, a QR code for me to scan or something, enter the amount, and hit "SEND".  What happens now?
+--
+
+[data-transition=none]
+== Transactions
+
+image::peer-to-peer-network.svg[]
+
+[NOTE.speaker]
+--
+Blockchains operate as peer-to-peer networks. We're perhaps most familiar with the idea of peer-to-peer networks from something like Bittorrent - a peer-to-peer network is something we grab data from, rather than write data too.
+
+We have our peer-to-peer network - there are a number of nodes, and each node is talking to some, but not all all, of the other nodes. Everyone - every actual person - who's interacting with the network is doing so through one of these nodes.
+--
+
+
+[data-transition=none]
+== Transactions
+
+image::sending-transaction.svg[]
+
+[NOTE.speaker]
+--
+I've composed my transaction and I send it into the network, through one of these nodes.
+
+The network is in the process of creating a new block...
+--
+
+[data-transition=none]
+== Transactions
+
+image::transaction-one-node.svg[]
+
+[NOTE.speaker]
+--
+The network is in the process of creating a new block. My node adds my transaction to its collection of "pending transactions". It's popping it into the Merkle tree it's constructing, recalculating the hashes, and so on.
+--
+
+[data-transition=none]
+== Transactions
+
+image::transaction-more-nodes.svg[]
+
+[NOTE.speaker]
+--
+Next, it forwards my transaction on to its peers.
+
+"Hey kids, I've got a new transaction for you."
+
+And those nodes add my transaction to their collection of pending transactions, and then they, too, will send it on to their peers. And gradually, my transaction spreads across the network.
+--
+
+[data-transition=none]
+== Transactions
+
+image::transaction-and-so-on.svg[]
+
+[NOTE.speaker]
+--
+But I might not be the only person buying a decaff oat-milk latte with extra sprinkles.
+
+As my transaction propagates through the network, other transactions are also travelling across it too.
+--
+
+[data-transition=none]
+== Transactions
+
+image::transactions-all-a-bit-different.svg[]
+
+[NOTE.speaker]
+--
+We've got other transactions coming onto the network, and the same thing happens to them. Nodes add them to their pool of pending transactions and send them on.
+
+And, of course, there are other transactions coming into the network all the time. They're might also be new nodes coming into the network, or dropping out of the network.
+
+All the nodes here could be in a slightly different state - they might all have seen different transactions, all in a slightly different order.
+--
+
+[data-transition=none]
+== Transactions
+
+image::settle-down-everyone.svg[]
+
+[NOTE.speaker]
+--
+And suddenly!
+
+One of the nodes says "I've got a new block!". We'll come to how it decides that in just a moment. It says it to itself initially.
+--
+
+[data-transition=none]
+== Transactions
+
+image::new-block-propagation.svg[]
+
+[NOTE.speaker]
+--
+Then it starts to tell its peers.
+
+That block contains some of the pending transactions, but not all.  As this new block spreads across the network, the transactions that didn't make it in get carried forwards into the successor block. And of course, there are new transactions coming in as well.
+--
+
+[data-transition=none]
+== Transactions
+
+image::competing-blocks.svg[]
+
+[NOTE.speaker]
+--
+And while that block is spreading across the network, another node might also pipe up "I've got a block!".
+
+And then this new block starts spreading across the network - both different, both claiming to be latest block.
+
+As chaotic as it is, this is normal.
+
+It's entirely normal for there to multiple "latest" blocks in flight at once.  So, how do these nodes in the middle know what to do?
+--

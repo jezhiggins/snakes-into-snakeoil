@@ -1,0 +1,335 @@
+== Consensus
+
+[ditaa, "stable", "svg"]
+--
+    +----------------------+    +-=--------------------+
+    |c07F                  |    |                      |
+    |    +------------+    |    |                      |
+    |    | time stamp |    |    |                      |
+    |    +------------+    |    |                      |
+ <--|                      |<===|                      |
+    |      +--------+      |    |                      |
+    |      |  data  |      |    |                      |
+    |      +--------+      |    |                      |
+    |                      |    |                      |
+    +----------------------+    +----------------------+
+--
+
+[NOTE.speaker]
+--
+Here's the blockchain as seen by one of the nodes in the middle there.
+
+We've got our nice new block and we waiting for/trying to create the next block.
+
+Then one of our peers says "here's a new block"
+--
+
+[data-transition=none]
+== Consensus
+
+[ditaa, "n-plus-1", "svg"]
+--
+    +----------------------+    +----------------------+
+    |c07F                  |    |c0F0     N+1          |
+    |    +------------+    |    |    +------------+    |
+    |    | time stamp |    |    |    | time stamp |    |
+    |    +------------+    |    |    +------------+    |
+ <--|                      |<===|                      |
+    |      +--------+      |    |      +--------+      |
+    |      |  data  |      |    |      |  data  |      |
+    |      +--------+      |    |      +--------+      |
+    |                      |    |                      |
+    +----------------------+    +----------------------+
+--
+
+[NOTE.speaker]
+--
+So it says "great, I'll just pop that on the end there".
+
+Then another of my peers says "hola! I've got that block N+1 we've been waiting for".
+
+And I have a look at it, and it's not what I've already got, it's something a bit different.
+--
+
+[data-transition=none]
+== Consensus
+
+[ditaa, "another-n-plus-1", "svg"]
+--
+                                +----------------------+
+                                |c0F0     N+1          |
+                                |    +------------+    |
+                                |    | time stamp |    |
+                                |    +------------+    |
+                                |                      |
+    +----------------------+    |      +--------+      |
+    |c07F                  |    |      |  data  |      |
+    |    +------------+    |    |      +--------+      |
+    |    | time stamp |    |    |                      |
+    |    +------------+    |    +----------------------+
+ <--|                      |<==
+    |      +--------+      |    +----------------------+
+    |      |  data  |      |    |cF00     N+1          |
+    |      +--------+      |    |    +------------+    |
+    |                      |    |    | time stamp'|    |
+    +----------------------+    |    +------------+    |
+                                |                      |
+                                |      +--------+      |
+                                |      |  data' |      |
+                                |      +--------+      |
+                                |                      |
+                                +----------------------+
+--
+
+[NOTE.speaker]
+--
+But that's ok, I'll just hang on to that too and get on with the business of trying to create a new block.
+
+Some time later, one of my peers is going "psst! heard about that new block? N+2!", and I'm like "no way!" and they're like "ikr"
+
+And this N+2 arrives ...
+--
+
+[data-transition=none]
+== Consensus
+
+[ditaa, "another-n-plus-2", "svg"]
+--
+                                +----------------------+
+                                |c0F0     N+1          |
+                                |    +------------+    |
+                                |    | time stamp |    |
+                                |    +------------+    |
+                                |                      |
+    +----------------------+    |      +--------+      |
+    |c07F                  |    |      |  data  |      |
+    |    +------------+    |    |      +--------+      |
+    |    | time stamp |    |    |                      |
+    |    +------------+    |    +----------------------+
+ <--|                      |<-+
+    |      +--------+      |  | +----------------------+    +----------------------+
+    |      |  data  |      |  | |cF00     N+1          |    |c777     N+2          |
+    |      +--------+      |  | |    +------------+    |    |    +------------+    |
+    |                      |  | |    | time stamp'|    |    |    | time stamp"|    |
+    +----------------------+  | |    +------------+    |    |    +------------+    |
+                              +-+                      |<===|                      |
+                                |      +--------+      |    |      +--------+      |
+                                |      |  data' |      |    |      |  data" |      |
+                                |      +--------+      |    |      +--------+      |
+                                |                      |    |                      |
+                                +----------------------+    +----------------------+
+--
+
+[NOTE.speaker]
+--
+Because N+2 has a hash pointer to its predecessor, I know that it's pointing back to, say, this red block here.
+
+Now, the red block looks more likely as the "real" N+1. I might see other potential N+1s, I might see other potential N+2s, so I have this little tree of possible futures.
+
+If I manage to create a new block, I'm going to add it to the longest chain I know about it.  In this case here, I'd build my block on the grey block not the green one.
+
+I as know more of what my peers have seen I get more and more confident about the "true" state of the chain. After a little while it's going to become clear that we are adding new blocks on our grey block rather than though this green block.
+
+That tree of possibilities has pruned down, and the trunk is clear.
+
+We've always got some uncertainty right at the head of the chain, but these little side shoots have withered away. The longest chain is the true chain, and that arises from the network. There's no single node saying "that block, that block". Each block can operate autonomously, but the consensus arises from the network as a whole.
+
+Now, there's no hard and fast rule when you can stop thinking about this possibilities, but the general heuristic for BlockChain is 6 blocks. Once something's six blocks old, we can regard it as done and dusted.
+
+BitCoin creates a new block approximately every 10 minutes. My coffee is stonecold by then.
+
+This is how we extend the chain, but we still haven't talked about how those nodes get to say they've created a new block.
+--
+
+== Mining
+
+[ditaa, "shape-of-a-block","svg"]
+--
+          +----------------------+
+          |          N+1         |
+          |    +------------+    |
+          |    | time stamp?|    |
+          |    +------------+    |
+      <---|                      |
+          |      +--------+      |
+          |      |  data? |      |
+          |      +--------+      |
+          |          ^           |
+          +----------+-----------+
+                     |
+                     |
+                   /---\
+              /--->|   |<---\
+              |    \---/    |
+            /---\         /---\
+       /--->|   |         |   |<-=-\
+       |    \---/         \---/    |
+       |      ^             ^      |
+       |      |             |
+     /---\  /---\         /---\
+/-=->|   |  |   |<-=-\    |   |
+|    \---/  \---/    |    \---/
+--
+
+[NOTE.speaker]
+--
+Here's our in-progress block, that each node is trying to create.
+
+We know what out block number is going to be.
+
+We're organising our transactions into our Merkle Tree at the bottom there,
+
+But how do we know when we've actually created a new block?
+
+There's something else in our block here.
+--
+
+[data-transition=none]
+== Mining
+
+[ditaa, "magical","svg"]
+--
+          +----------------------+
+          |          N+1         |
+          |    +------------+    |
+          |    | time stamp?|    |
+          |    +------------+    |
+          |                      |
+          |  +----------------+  |
+          |  |cFF0MAGICAL     |  |
+      <---|  |  R A N D O M   |  |
+          |  |    NUMBER!     |  |
+          |  +----------------+  |
+          |                      |
+          |      +--------+      |
+          |      |  data? |      |
+          |      +--------+      |
+          |                      |
+          +----------------------+
+--
+
+[NOTE.speaker]
+--
+It's a magical random number.
+
+All the time, we're calculating the hash of things - the branches of our Merkle tree in the data here, we calculate the hash our predecessor to verify it's ok, and so on.
+
+And we calculate the hash of the new block we're creating. If the hash we calculate has some particular property, say 6 leading zeros, we win! We've created a new block. But waiting for that happen just by arranging the transactions we've got might take a very long time. Indeed it might never happen. So, we add a little extra into the mix - a magical random number.
+
+We gather our transactions into a tree, pick a random number, calculate the hash of the whole lot. Does it win? Does it have whatever characteristic we're looking for? No. How sad. Quick, pick another number! Recalculate the hash. Get it this time? Another number, another hash. Quicker!
+
+Eventually someone, somewhere, will stumble on the right combination of transactions and magic number, and creates - *mines* - a new block.
+
+Because of the opaque nature of the hash functions, it's hard to find this magic number - hard in the sense that you have to spin through a lot numbers - but easy for everyone to verify.
+--
+
+== Danger of Death
+
+image::bitchair.jpg[]
+
+[NOTE.speaker]
+--
+Guessing these numbers before anyone else is why people lash together ridiculous rigs like this.
+
+You'd imagine that if the magic numbers, the nonces, were found more quickly, the blocks would start to be mined more quickly. This isn't the case.  The "difficulty" is adjusted periodically - in BitCoin's case every 2016 blocks, about one a fortnight - to maintain the desired average block time.
+
+If we had a sudden influx of new nodes, all with outrageous compute power, all that would happen would be it would get more difficult to create new blocks.
+
+It turns out that the particular hash function Bitcoin uses is very amenable to vectorisation so there was a genuine bubble for high-end GPUs for a while, and now people will sell you custom ASICs for it. Other crytocurrencies, learning from that experience, designed hash functions which are ASIC-resistant. The same general scheme applies though - adjust the difficulty to maintain the desired block rate.
+
+Aside from the novelty of it, why would people spend the time and effort to build and maintain these rigs?
+--
+
+== Incentives
+
+[%step]
+* The Block Reward
+
+* Transaction Fees
+
+[NOTE.speaker]
+--
+I've avoided saying the word "cryptocurrency" too often in this session, but now I'm going to have to.  We're talking about a currency, or at least something that purports to be a currency, so we encourage people to run the nodes, to do this work, by "incentivising" them.
+
+We pay them.
+
+We pay them in two ways.
+
+*The block reward*. The node that creates a block get to include a special "coin creation" transaction in that block. This creates new Bitcoins out of nothing and credits them to an address, typically, of course, your own. The Bitcoin block rewards started at 50 bitcoin, but halves every 210,000 blocks and is now 12.5 bitcoins. It'll eventually fall to zero (sometime in 2140), when all the bitcoins will be in existence.  Other cryptocurrencies have similar schemes.
+
+The second incentive is the *transaction fee*. When I sent my transaction onto the network, I said pay my bearded barista how ever much. I can also then say "and have this for your trouble". This might make my transaction more attractive, in financial terms, than someone elses and so nodes might choose to incorporate it into a block ahead of some other transactions. The node that mines the block gets all the fees offered by the transactions.
+--
+
+== That's pretty much it
+
+[NOTE.speaker]
+--
+That's pretty much it - that's how a blockchain based crytocurrency hangs together.
+
+By using hash pointers, both from one block to the next, and within the tree of transactions, we can provide guarantees about immutability and tamper-evidence. Because transactions are cryptographically signed, we can be sure about the origin of each one. And through this consensus mechanism, we can create a blockchain we all agree on in the absence of any central authority.
+--
+
+== Variations on a theme
+
+image::bitcoin-logo.png[]
+
+[NOTE.speaker]
+--
+I've referred, so far, pretty much exclusively to Bitcoin. It was the first cryptocurrency, so it's the one most people have heard of, and it also set the template for what followed.
+
+There are now somewhere north of 2000 cryptocurrencies. Creating a new one is easy! By definition all this code needs to be open source, so you just grab that, tweak it a tiny bit and off you go. Or just goto http://build-a-co.in and fill in a form.
+
+Other cryptocurrencies are broadly similar. They might differ in terms of block frequency - Ethereum creates a new block every 15 seconds, for instance - or in how block rewards are created. Some systems generate all the currency right up front, and just had it out. One area where there's a lot of active work in the block creation mechanism.
+--
+
+== Consensus revisted
+
+* Proof-of-work
+
+[%step]
+* Proof-of-stake
+* Proof-of-authority
+
+[NOTE.speaker]
+--
+The system I described is proof-of-work. It achieves it's aim, but it's hugely wasteful.  In a proof-of-work system, the chance of you mining the new block are proportional to your *hashpower* compared to the hashpower of the whole network.
+
+In a proof-of-stake network, you pay a stake for the chance to create a new block. You chance then become linked to the size of your stake. There's an interesting bootstrapping problem here, of course, and you'd need protections to prevent the whole system getting hijacked, but it's an active area of development.
+
+Proof-of-authority doesn't rely on either of these mechanisms. Instead, you define a limited number of nodes and say "one of you can mine the next block". Then you can turn the difficulty on your hash function right down.  Proof-of-authority flies in the face of the "no central authority" thing, but for many applications that probably not an issue and probably a benefit.
+
+One of the consistent themes of the talk so far is me holding back information to spring on you at a later point.  I'm going to do it again.
+
+I've blithely talked about transactions saying person A sends some bitcoin to person B, and made it sound like that's a little data structure or something. That's not quite the case - the transaction is actually a little script. The scripting language in Bitcoin is pretty basic - its not Turing complete, for instance - and it's clear to me that much is done with it beyond the send some money to person B.
+
+Some blockchains go beyond simple scripting into some much broader, into what we call smart contracts.Ethereum is the probably best the known crytocurrency example.  You might also have heard of Hyperledger Fabric.
+--
+
+== Smart Contracts
+
+[source, solidity]
+----
+  function store(string key, string payload) external permittedOnly {
+    bytes32 previous_key = moveExisting(key);
+    bytes32 null_key;
+
+    Payload storage newPayload = registry[key];
+    newPayload.payload = payload;
+    newPayload.previous_key = previous_key;
+
+    if (previous_key == null_key)
+      emit Registration(msg.sender, key, payload);
+    else
+      emit Update(msg.sender, key, payload);
+  } // store
+----
+
+[NOTE.speaker]
+--
+Now we all know that naming things in Computer Science is hard. However, in this particular case, the naming is deliberatly obfuscatory. A smart contract is not smart, nor is it a contract. It's a program you can deploy into your blockchain.
+
+The programs expose various public methods, and calls to those methods can form one of the transactions encoded into each block. When your client downloads and validates a block, it runs any smart contract method calls in the block. So a smart contract is way of asking other people to perform computation on your behalf.
+
+Now this sounds like a one-way trip to Denial-of-service city. The mechanism to prevent that is, you'll be unsurprised to learn, financial.  Each opcode has a cost associated with it, and to run the method your transaction is actually "call this method with there parameters and I will pay this amount".  If you don't pay enough, it doesn't run. Ethereum also incorporates a computational limit on each block, so there's an upper-bound on it.
+--
+
