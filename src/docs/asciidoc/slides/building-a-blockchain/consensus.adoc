@@ -134,9 +134,11 @@ That tree of possibilities has pruned down, and the trunk is clear.
 
 We've always got some uncertainty right at the head of the chain, but these little side shoots have withered away. The longest chain is the true chain, and that arises from the network. There's no single node saying "that block, that block". Each block can operate autonomously, but the consensus arises from the network as a whole.
 
+One of the consequences of this is that there's no guarantee of when, if ever, a particular transaction is incorporated into the chain.
+
 Now, there's no hard and fast rule when you can stop thinking about this possibilities, but the general heuristic for BlockChain is 6 blocks. Once something's six blocks old, we can regard it as done and dusted.
 
-BitCoin creates a new block approximately every 10 minutes. My coffee is stonecold by then.
+BitCoin creates a new block approximately every 10 minutes. For my barista to be confident my transaction is good, we have to wait 30 minutes to an hour. My coffee is stone cold by then.
 
 This is how we extend the chain, but we still haven't talked about how those nodes get to say they've created a new block.
 --
