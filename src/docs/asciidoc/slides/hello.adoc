@@ -1,5 +1,6 @@
+[data-transition=none]
 == Snakes Into Snake Oil
-*_What Blockchains Are And Why They Are Terrible_*
+*_What Blockchains Are And Why They're Terrible_*
 
 image::illuminated-by-monitor-light.jpg["Illuminated By Monitor Light"]
 
@@ -20,6 +21,7 @@ Anyway, this year, for this conference, I thought about things a lot.  A hell of
 No, I gave it a lot of thought because ...
 --
 // hmm
+[data-transition=none]
 == !
 
 ____
@@ -40,6 +42,7 @@ Hopefully, at the end of this session, we'll know enough to all be able to happi
 --
 
 // Snakes Into Snake Oil
+[data-transition=none]
 == !
 
 [%step]

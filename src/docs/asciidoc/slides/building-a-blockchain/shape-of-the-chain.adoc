@@ -1,3 +1,4 @@
+[data-transition=none]
 == Snakes Into Snake Oil
 
 [NOTE.speaker]
@@ -11,8 +12,8 @@ Even if we just confine ourselves to Bitcoin, as it was the first cryptocurrency
 They all use on the same software though, so let's use that look at what they do agree on.
 --
 
-[%notitle, data-transition=none]
-== The Shape Of The Chain
+[data-transition=none]
+== !
 
 [ditaa, "shape-of-the-chain","svg"]
 --
@@ -25,22 +26,23 @@ They all use on the same software though, so let's use that look at what they do
     |      +--------+      |   |      +--------+      |   |      +--------+      |
     |      |  data  |      |   |      |  data  |      |   |      +  data  +      |
     |      +--------+      |   |      +--------+      |   |      +--------+      |
-    |                      |   |          ^           |   |                      |
+    |                      |   |                      |   |                      |
     +----------------------+   +----------+-----------+   +----------------------+
                                           |
-                                          |
+                                          v
                                         /---\
-                                   /--->|   |<---\
+                                   /----|   |----\
                                    |    \---/    |
+                                   v             v
                                  /---\         /---\
-                            /--->|   |         |   |<-=-\
+                            /----|   |         |   |--=-\
                             |    \---/         \---/    |
-                            |      ^             ^      |
-                            |      |             |
+                            |      |             |      v
+                            v      v             v
                           /---\  /---\         /---\
-                     /-=->|   |  |   |<-=-\    |   |
+                     /-=--|   |  |   |--=-\    |   |
                      |    \---/  \---/    |    \---/
-
+                     v                    v
 --
 
 [NOTE.speaker]
@@ -58,8 +60,8 @@ So a block contains a load of transactions, the timestamp when it was created, a
 This is the general shape for all blockchains and cryptocurrencies, and then following section applies generally too. There are, as ever, one or two exceptions each time - it's not worth going into those, except to note that they exist and that their main effect it to fuel "why suchandsuch is the crypto to watch" type articles.
 --
 
-[data-transition=none, %notitle]
-== Append Only
+[data-transition=none]
+== !
 
 image::shape-of-the-chain.svg[]
 
@@ -77,18 +79,15 @@ The only way to add further data it to include in a subsequently block.
 We can see, pretty naturally then, that blockchains are append only.
 --
 
-[data-transition=none, %notitle]
-== Guaranteed Provenance
+[data-transition=none]
+== !
 
 image::shape-of-the-chain.svg[]
 
 [cols=1, stripes=none, grid=none, frame=none]
 |===
-|append only
-|===
-[cols=1, stripes=none, grid=none, frame=none]
-|===
-|guarantees provenance
+|append only +
+guarantees provenance
 |===
 
 [NOTE.speaker]
@@ -99,22 +98,19 @@ Your "user account" on a blockchain is usually referred to as your "address".  W
 
 When you send a transaction, you sign it with your public key.  Consequently we know who, or at least which address, wrote which bit of data when.
 
-We can, therefore, track every transaction made by a particular address. That's how we know how many Bitcoins you own :)  We walk the entire ledger, the whole history of the chain, looking for transactions involving your address, either as signer or recipient.
+We can, therefore, track every transaction made by a particular address.  It also means we could, if we really wanted to, track what happens to every single coin in the system.
 --
 
-[data-transition=none, %notitle]
-== Distributed
+[data-transition=none]
+== !
 
 image::shape-of-the-chain.svg[]
 
 [cols=2, stripes=none, grid=none, frame=none]
 |===
-|append only
+|append only +
+guarantees provenance
 |distributed database
-|===
-[cols=1, stripes=none, grid=none, frame=none]
-|===
-|guarantees provenance
 |===
 
 [NOTE.speaker]
@@ -124,20 +120,17 @@ Blockchains and cryptocurrencies run as peer-to-peer networks. For each node in 
 They're not very good distributed databases in some senses - the read speed is dreadful and the write speed just appalling - but they're are definitely very, very distributed.
 --
 
-[data-transition=none, %notitle]
-== No Central Authority
+[data-transition=none]
+== !
 
 image::shape-of-the-chain.svg[]
 
 [cols=2, stripes=none, grid=none, frame=none]
 |===
-|append only
-|distributed database
-|===
-[cols=2, stripes=none, grid=none, frame=none]
-|===
-|guarantees provenance
-|no central authority
+|append only +
+guarantees provenance
+|distributed database +
+no central authority
 |===
 
 [NOTE.speaker]

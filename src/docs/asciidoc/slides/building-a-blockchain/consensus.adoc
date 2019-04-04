@@ -1,4 +1,5 @@
-== Consensus
+[data-transition=none]
+== !
 
 [ditaa, "stable", "svg"]
 --
@@ -25,7 +26,7 @@ Then one of our peers says "here's a new block"
 --
 
 [data-transition=none]
-== Consensus
+== !
 
 [ditaa, "n-plus-1", "svg"]
 --
@@ -52,7 +53,7 @@ And I have a look at it, and it's not what I've already got, it's something a bi
 --
 
 [data-transition=none]
-== Consensus
+== !
 
 [ditaa, "another-n-plus-1", "svg"]
 --
@@ -91,7 +92,7 @@ And this N+2 arrives ...
 --
 
 [data-transition=none]
-== Consensus
+== !
 
 [ditaa, "another-n-plus-2", "svg"]
 --
@@ -138,12 +139,11 @@ One of the consequences of this is that there's no guarantee of when, if ever, a
 
 Now, there's no hard and fast rule when you can stop thinking about this possibilities, but the general heuristic for BlockChain is 6 blocks. Once something's six blocks old, we can regard it as done and dusted.
 
-BitCoin creates a new block approximately every 10 minutes. For my barista to be confident my transaction is good, we have to wait 30 minutes to an hour. My coffee is stone cold by then.
-
 This is how we extend the chain, but we still haven't talked about how those nodes get to say they've created a new block.
 --
 
-== Mining
+[data-transition=none]
+== !
 
 [ditaa, "shape-of-a-block","svg"]
 --
@@ -187,7 +187,7 @@ There's something else in our block here.
 --
 
 [data-transition=none]
-== Mining
+== !
 
 [ditaa, "magical","svg"]
 --
@@ -238,7 +238,8 @@ Eventually someone, somewhere, will stumble on the right combination of transact
 Because of the opaque nature of the hash functions, it's hard to find this magic number - hard in the sense that you have to spin through a lot numbers - but easy for everyone to verify.
 --
 
-== Danger of Death
+[data-transition=none]
+== !
 
 image::bitchair.jpg[]
 
@@ -255,7 +256,8 @@ It turns out that the particular hash function Bitcoin uses is very amenable to 
 Aside from the novelty of it, why would people spend the time and effort to build and maintain these rigs?
 --
 
-== Incentives
+[data-transition=none]
+== !
 
 [%step]
 * The Block Reward
@@ -275,7 +277,10 @@ We pay them in two ways.
 The second incentive is the *transaction fee*. When I sent my transaction onto the network, I said pay my bearded barista how ever much. I can also then say "and have this for your trouble". This might make my transaction more attractive, in financial terms, than someone elses and so nodes might choose to incorporate it into a block ahead of some other transactions. The node that mines the block gets all the fees offered by the transactions.
 --
 
-== That's pretty much it
+[data-transition=none]
+== !
+
+image::shape-of-the-chain.svg[]
 
 [NOTE.speaker]
 --
@@ -284,43 +289,123 @@ That's pretty much it - that's how a blockchain based crytocurrency hangs togeth
 By using hash pointers, both from one block to the next, and within the tree of transactions, we can provide guarantees about immutability and tamper-evidence. Because transactions are cryptographically signed, we can be sure about the origin of each one. And through this consensus mechanism, we can create a blockchain we all agree on in the absence of any central authority.
 --
 
-== Variations on a theme
+[data-transition=none]
+== !
 
 image::bitcoin-logo.png[]
 
 [NOTE.speaker]
 --
 I've referred, so far, pretty much exclusively to Bitcoin. It was the first cryptocurrency, so it's the one most people have heard of, and it also set the template for what followed.
-
-There are now somewhere north of 2000 cryptocurrencies. Creating a new one is easy! By definition all this code needs to be open source, so you just grab that, tweak it a tiny bit and off you go. Or just goto http://build-a-co.in and fill in a form.
-
-Other cryptocurrencies are broadly similar. They might differ in terms of block frequency - Ethereum creates a new block every 15 seconds, for instance - or in how block rewards are created. Some systems generate all the currency right up front, and just had it out. One area where there's a lot of active work in the block creation mechanism.
 --
 
-== Consensus revisted
+[data-transition=none]
+== !
 
-* Proof-of-work
+image::bitcoin-and-others-logo.png[]
+
+[NOTE.speaker]
+--
+There are now somewhere north of 2000 cryptocurrencies. Creating a new one is easy! By definition all this code needs to be open source, so you just grab that, tweak it a tiny bit and off you go.
+--
+
+[data-transition=none]
+== !
+
+image::bitcoin-and-others-logo.png[]
+
+Or create your own +
+at +
+http://build-a-co.in/
+
+[NOTE.speaker]
+--
+
+Or just goto http://build-a-co.in and fill in a form.
+
+Other cryptocurrencies are broadly similar.  Often, these other cryptocurrencies are attempting to correct some perceived flaw in BitCoin, or the flaw in the one that corrected the perceived flaw ...
+
+That's why some of these logos look similar to each other - they're forks of each other.
+
+These other cryptocurrencies might differ in terms of block frequency - how often new blocks are created - or in block size - how much data we can stuff into one block - or in how block rewards are created. Some systems generate all the currency right up front, and just had it out.
+
+One area where there's a lot of active work in the block creation mechanism.
+--
+
+[data-transition=none]
+== !
 
 [%step]
+* Proof-of-work
+
 * Proof-of-stake
+
 * Proof-of-authority
 
 [NOTE.speaker]
 --
-The system I described is proof-of-work. It achieves it's aim, but it's hugely wasteful.  In a proof-of-work system, the chance of you mining the new block are proportional to your *hashpower* compared to the hashpower of the whole network.
+The system I described a few moments ago is called proof-of-work. It achieves it's aim, but it's hugely wasteful.  In a proof-of-work system, the chance of you mining the new block are proportional to your *hashpower* compared to the hashpower of the whole network.
 
 In a proof-of-stake network, you pay a stake for the chance to create a new block. You chance then become linked to the size of your stake. There's an interesting bootstrapping problem here, of course, and you'd need protections to prevent the whole system getting hijacked, but it's an active area of development.
 
 Proof-of-authority doesn't rely on either of these mechanisms. Instead, you define a limited number of nodes and say "one of you can mine the next block". Then you can turn the difficulty on your hash function right down.  Proof-of-authority flies in the face of the "no central authority" thing, but for many applications that probably not an issue and probably a benefit.
 
-One of the consistent themes of the talk so far is me holding back information to spring on you at a later point.  I'm going to do it again.
+The other major way some of these platforms differ is in what can go into a transaction.
 
-I've blithely talked about transactions saying person A sends some bitcoin to person B, and made it sound like that's a little data structure or something. That's not quite the case - the transaction is actually a little script. The scripting language in Bitcoin is pretty basic - its not Turing complete, for instance - and it's clear to me that much is done with it beyond the send some money to person B.
+[data-transaction=none]
+== !
 
-Some blockchains go beyond simple scripting into some much broader, into what we call smart contracts.Ethereum is the probably best the known crytocurrency example.  You might also have heard of Hyperledger Fabric.
+[source]
+--
+{
+  "hash": "5a425...",
+  "ver": 1,
+  "vin_sz": 2,
+  "vout_sz": 1,
+  "lock_time": 0,
+  "size": 404,
+  "in": [{
+    "prev_out": {
+      "hash": "3be4a...",
+      "n": 0,
+    },
+    "scriptSig": "30440..."
+  }, {
+    "prev_out": {
+      "hash": "7508e6...",
+      "n": 0,
+    },
+    "scriptSig": "3f3a4...",
+  }],
+  "out": [{
+    "value": "10.12287097",
+    "scriptPubKey":"OP_DUP OP_HASH160 69e02...
+        OP_EQUALVERIFY OP_CHECKSIG"
+  }]
+}
 --
 
-== Smart Contracts
+One of the consistent themes of the talk so far is me holding back information to spring on you at a later point.  I'm going to do it again.
+
+I've blithely talked about transactions saying person A sends some bitcoin to person B, and made it sound like that's a little data structure or something. That's not quite the case - the transaction is actually a little script.
+
+Here's an example - we've got a metadata header at the top - number in inputs, number of outputs, and the hash of the entire transaction.
+
+Then we have the input section. An input specifies a previous transaction, so we have the hash of that transaction, and the index of the output we're claiming.
+
+Then we have the outputs - in this case only one although their can be many.  The output has a value, and the sum of the output has to be equal or less than the sum of the inputs. If it's less, the difference is the transaction fee. Then there's this weird line here - this is a BitCoin script.
+
+The scripting language in Bitcoin is pretty basic - its not Turing complete, for instance - and it's not clear to me that much is done with it beyond the send some money to person B.
+
+This little bit of script here is saying, in effect, the output of this script can be redeemed by a public key that hashes to 69e02whatever, along with a value signature from the owner of that key".
+
+There are two possible outcomes from one of these scripts - it works, in which case the transaction is valid - or it doesn't, in which case it will be discarded.  There are about 160 opcodes in the Bitcoin script language, but these 4 in this order are the most common by far.
+
+Some blockchains go beyond simple scripting into something much broader, into what we call smart contracts.  Ethereum is the probably best the known cryptocurrency example.  You might also have heard of Hyperledger Fabric.
+--
+
+[data-transition=none]
+== !
 
 [source, solidity]
 ----
@@ -341,7 +426,7 @@ Some blockchains go beyond simple scripting into some much broader, into what we
 
 [NOTE.speaker]
 --
-Now we all know that naming things in Computer Science is hard. However, in this particular case, the naming is deliberatly obfuscatory. A smart contract is not smart, nor is it a contract. It's a program you can deploy into your blockchain.
+Now we all know that naming things in Computer Science is hard. However, in this particular case, the naming is deliberately obfuscatory. A smart contract is not smart, nor is it a contract. It's a program you can deploy into your blockchain.
 
 The programs expose various public methods, and calls to those methods can form one of the transactions encoded into each block. When your client downloads and validates a block, it runs any smart contract method calls in the block. So a smart contract is way of asking other people to perform computation on your behalf.
 

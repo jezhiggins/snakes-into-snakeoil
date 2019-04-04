@@ -1,3 +1,4 @@
+[data-transition=none]
 == Building A Blockchain
 
 [NOTE.speaker]
@@ -5,6 +6,7 @@
 So let's build a blockchain.
 --
 
+[data-transition=none]
 == !
 
 [ditaa, "linked-list", "svg"]
@@ -32,6 +34,7 @@ Hmm - this looks a bit like the picture we just looked at.
 What if, instead of pointing forwards, we swap those pointers around so each element points to its predecessor.
 --
 
+[data-transition=none]
 == !
 
 [ditaa, "reverse-linked-list", "svg"]
@@ -69,6 +72,7 @@ This immediately allows us to verify that information hasn't been changed.  If I
 Is it clear why?
 --
 
+[data-transition=none]
 == !
 
 [ditaa, "hash-linked-list", "svg"]
@@ -98,7 +102,7 @@ We could use another list, I suppose, but, as I've already hinted, instead we us
 --
 
 [data-transition=none]
-== Trees
+== !
 
 [ditaa, "tree","svg"]
 --
@@ -130,7 +134,7 @@ In the same way as we applied them our our list, we're going to apply the hash p
 --
 
 [data-transition=none, %notitle]
-== Merkle Trees
+== !
 
 [ditaa, "merkle-tree","svg"]
 --
@@ -165,8 +169,8 @@ In the same way as the linked list, this makes the tree tamper proof.  If some o
 The also gives us proof-of-membership.  If I present a piece of data, and the hashes of the path to the root, we can quickly establish if this bit of data does actually live in this tree.
 --
 
-[%notitle]
-== That's how it fits together
+[data-transition=none]
+== !
 
 image::shape-of-the-chain.svg[]
 

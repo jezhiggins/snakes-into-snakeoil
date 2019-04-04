@@ -1,4 +1,5 @@
-== Transactions
+[data-transition=none]
+== !
 
 image::bitcoin-coffee-prague.jpg[]
 
@@ -12,7 +13,7 @@ I whip out my bitcoin client, laboriously type in the lengthy string of hex digi
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::peer-to-peer-network.svg[]
 
@@ -25,7 +26,7 @@ We have our peer-to-peer network - there are a number of nodes, and each node is
 
 
 [data-transition=none]
-== Transactions
+== !
 
 image::sending-transaction.svg[]
 
@@ -37,7 +38,7 @@ The network is in the process of creating a new block...
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::transaction-one-node.svg[]
 
@@ -47,7 +48,7 @@ The network is in the process of creating a new block. My node adds my transacti
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::transaction-more-nodes.svg[]
 
@@ -61,7 +62,7 @@ And those nodes add my transaction to their collection of pending transactions, 
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::transaction-and-so-on.svg[]
 
@@ -73,7 +74,7 @@ As my transaction propagates through the network, other transactions are also tr
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::transactions-all-a-bit-different.svg[]
 
@@ -87,7 +88,7 @@ All the nodes here could be in a slightly different state - they might all have 
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::settle-down-everyone.svg[]
 
@@ -99,7 +100,7 @@ One of the nodes says "I've got a new block!". We'll come to how it decides that
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::new-block-propagation.svg[]
 
@@ -111,7 +112,7 @@ That block contains some of the pending transactions, but not all.  As this new 
 --
 
 [data-transition=none]
-== Transactions
+== !
 
 image::competing-blocks.svg[]
 

@@ -3,6 +3,7 @@ include::building-a-blockchain/lists-and-trees.adoc[]
 include::building-a-blockchain/transactions.adoc[]
 include::building-a-blockchain/consensus.adoc[]
 
+[data-transition=none]
 == And that's what blockchains are
 
 [NOTE.speaker]
