@@ -2,6 +2,7 @@ include::building-a-blockchain/shape-of-the-chain.adoc[]
 include::building-a-blockchain/lists-and-trees.adoc[]
 include::building-a-blockchain/transactions.adoc[]
 include::building-a-blockchain/consensus.adoc[]
+include::building-a-blockchain/variations-on-a-theme.adoc[]
 
 [data-transition=none]
 == And that's what blockchains are
