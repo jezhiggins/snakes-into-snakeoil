@@ -1,4 +1,5 @@
-== Snakes Into Snake Oil
+[data-transition=none]
+== Why They're Terrible
 
 [NOTE.speaker]
 --
@@ -8,6 +9,7 @@ While the pre-history of blockchains goes back further - very few of the techniq
 --
 
 // Money is a pain
+[data-transition=none]
 == !
 
 [quote, David Gerard, Attack of the Fifty Foot Blockchain]
@@ -32,6 +34,7 @@ In addition to the payment services offered by banks, building societies and so 
 Among the bright young Silicon Valley movers and shakers, that just didn't fly.
 --
 // You're not the Boss of me!
+[data-transition=none]
 == !
 
 YOU'RE NOT THE BOSS OF ME
@@ -53,6 +56,7 @@ Bitcoin, as a system, was described in a "white paper" published in October 2008
 And it's all been downhill from there.
 --
 // Bitcoin: A Peer-to-Peer Electronic Cash System
+[data-transition=none]
 == !
 
 [quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]
@@ -69,6 +73,7 @@ This stuff could be gold!
 They continue ...
 --
 // Bitcoin: A Peer-to-Peer Electronic Cash System
+[data-transition=none]
 == !
 
 [quote]

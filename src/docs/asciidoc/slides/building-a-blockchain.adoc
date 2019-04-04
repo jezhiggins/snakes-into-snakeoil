@@ -5,7 +5,7 @@ include::building-a-blockchain/consensus.adoc[]
 include::building-a-blockchain/variations-on-a-theme.adoc[]
 
 [data-transition=none]
-== And that's what blockchains are
+== That's what blockchains are
 
 [NOTE.speaker]
 --
