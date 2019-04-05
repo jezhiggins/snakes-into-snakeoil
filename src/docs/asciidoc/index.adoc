@@ -2,8 +2,10 @@
 :revealjs_progress: false
 
 include::slides/hello.adoc[]
-
 include::slides/building-a-blockchain.adoc[]
+
+include::slides/intermission.adoc[]
+
 include::slides/what-are-blockchains-and-cryptocurrencies.adoc[]
 
 include::slides/a-million-applications-all-terrible.adoc[]

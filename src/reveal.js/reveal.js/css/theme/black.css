@@ -77,11 +77,18 @@ body {
   line-height: 1.3; }
 
 /* Ensure certain elements are never larger than the slide itself */
-.reveal img,
+.reveal img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
 .reveal video,
 .reveal iframe {
   max-width: 95%;
-  max-height: 95%; }
+  max-height: 95%;
+  width: 1000px;
+  height: 600px;
+}
 
 .reveal strong,
 .reveal b {

@@ -1,0 +1,27 @@
+[data-transition=none]
+== Snakes Into Snake Oil
+*_What Blockchains Are And Why They're Terrible_*
+
+image::illuminated-by-monitor-light.jpg["Illuminated By Monitor Light"]
+
+Jez Higgins
+
+_... continues after these messages..._
+
+[data-transition=none]
+== !
+
+video::Gc2en3nHxA4[youtube]
+
+[data-transition=none]
+== !
+
+video::j23HnORQXvs[youtube, width=640]
+
+[data-transition=none]
+== Snakes Into Snake Oil
+*_What Blockchains Are And Why They're Terrible_*
+
+image::illuminated-by-monitor-light.jpg["Illuminated By Monitor Light"]
+
+Jez Higgins
