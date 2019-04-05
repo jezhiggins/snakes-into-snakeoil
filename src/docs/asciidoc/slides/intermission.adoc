@@ -11,12 +11,12 @@ _... continues after these messages..._
 [data-transition=none]
 == !
 
-video::Gc2en3nHxA4[youtube]
+video::Gc2en3nHxA4[youtube, width=1000, height=600]
 
 [data-transition=none]
 == !
 
-video::j23HnORQXvs[youtube, width=640]
+video::j23HnORQXvs[youtube, width=1000, height=600]
 
 [data-transition=none]
 == Snakes Into Snake Oil
@@ -25,3 +25,11 @@ video::j23HnORQXvs[youtube, width=640]
 image::illuminated-by-monitor-light.jpg["Illuminated By Monitor Light"]
 
 Jez Higgins
+
+[NOTE.speaker]
+--
+So, in the first part of this session, we looked at what blockchains are.
+
+"And now the conclusion..."
+--
+

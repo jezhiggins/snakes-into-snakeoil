@@ -1,1 +1,190 @@
+[data-transition=none]
 == Why They're Terrible
+
+[NOTE.speaker]
+--
+You've just seen a couple of adverts, one for BitCoin, one for Ethereum.  Did anything strike you about them?
+
+The thing that stands out to me is the, weirdly, the essence of distrust that runs through it - person to person, can't be frozen, no censorship, no third party interference, no banks.
+--
+
+[data-transition=none]
+== !
+
+*Cryptocurrencies are not currencies*
+
+[NOTE.speaker]
+--
+The "advantage" of cryptocurrenciesis that there's no central authority, no reversibility.
+
+That's fundamentally at odds with our modern financial system, right? That relies on transaction reversibility to, for example, counteract fraud.
+
+The video a moment ago said "go to an exchange, buy some BitCoin with your actually useful dollars or Euros or Yen". But wait a minute, do I have to trust these exchanges then?
+
+Yes, you do.  But we're so easy, so they exchanges - we'll buy the cryptocurrency for you and we'll store you wallet too.
+--
+
+[data-transition=none]
+== !
+
+image::hacked-exchanges.png[]
+
+[NOTE.speaker]
+--
+One of the most famous is this one in the middle there - Mt Gox. It was hacked twice, once in 2011 and once in 2014. The 2014 hack had a purported dollar value of $460 million.
+
+Do you know where the name MtGox comes from?  Magic The Gathering: Online Exchange. It was started as marketplace for Magic card trading, which ran for a few months in 2007. In 2010, he read a Slashdot post about Bitcoin, tried to buy some and couldn't, so thought an exchange would be a good idea. He slapped together something in PHP, reused the domain, and that was that.
+
+In 2012, an exchange called Bitcoinica, run by a 17 year old kid, was hacked three times - March, May, and July.  The nominal dollar values were $228,000, $80,000, and $300,000.
+
+There have been at least 20 hacks of cryptocurrency exchanges. Approximately 7% of all Bitcoins have been stolen.
+
+Bitcoin proponents will say - yea but that was the exchanges - the ledger was secure - which is true but unhelpful. They'll also say "yea, but banks get hacked" which is also true, but similarly unhelpful.
+
+There's no regulation, no insurance, no nothing - you're out my friend.
+
+Ok, so let's not use the exchanges. Assuming I have managed to get hold of some cryptocurrency somehow, I'll keep my wallet nice and secure on my own device.
+--
+
+[data-transition=none]
+
+== !
+
+image::bitpay-compromise.png[]
+
+[NOTE.speaker]
+--
+But I still have to trust the software I'm using.
+
+Wallet software infected via dodgy NPM package. Users advised to update aoo and move coins to a new wallet.
+
+https://www.telegraph.co.uk/technology/2018/11/27/bitcoin-owners-told-transfer-savings-bitpay-exchange-private/
+--
+
+[data-transition=none]
+== !
+
+image::bitcoin-dump-2013.png[]
+
+[NOTE.speaker]
+--
+Oh dear. And make sure I have proper backups. [Also, don't thrown computer hardward in landfill man - that is super bad].
+--
+
+[data-transition=none]
+== !
+
+image::forgotten-pin.png[]
+
+[NOTE.speaker]
+--
+How sad. Or forget my pin.
+--
+
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+… entered his words into Notepad to print them out, and promptly had his Bitcoin stolen due to a keylogger …
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+… printed out his seed words but was missing several due to incorrectly page margins …
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+A customer stored his recovery word card in his jeans. The card was destroyed when the jeans had been laundered, which he only discovered months later when updating his wallet firmware.
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+
+[data-transition=none]
+== !
+
+[NOTE.speaker]
+--
+In these modern times, we're very aware of that Silicon Valley (and I use that as something of a shorthand) is riddled with people who hold what generously be described as 'unfortunate' political beliefs. We think of this as a modern phenomenon. The Silicon Valley of the past has seemed fun and hippyish - everybody loves Woz right? - but it was ever thus.
+
+The prime movers in the search for electronic cash come from a libertarian anarcho-capitalist strand of thought that, I think, most of us would regard with horror. In particular, it regards government oversight (or as they would probably put it - unjustified government interference) as a threat and something to be worked around, undermined, and avoided.
+
+PayPal was explicitly founded as an anonymous money-transfer channel operating outside government regulation. Of course, Thiel changed tack as soon as he realised that being side the tent pissing in was going to be far less profitable that being inside the tent pissing all over the floor.
+
+Anyway, prior to Bitcoin, there had been a number of attempts at electronic cash. A guy called Nick Szabo proposed a thing called Bitgold, while Wei Dai described b-money, back in 1998. However, they didn't have implementations - they were, at least at the time, all talk and no trousers.
+
+One of the things these proposals foundered on was the double-spend problem. If you want to avoid government oversight, then you can't have any kind of central authority in your system because, you know, that gives that pesky government a regulatory hook point and before you know it they'll be asking you to pay tax and operate as at least a partially functioning member of society. However, if you don't have that central authority, what's to stop me spending £10 with you over here and the very same £10 with you over there, high-tailing it with the goods and stiffing one and/or both of you?
+
+Bitcoin, as a system, was described in a "white paper" published in October 2008 on a Cypherpunks mailing list by someone calling themselves Satoshi Nakamoto. They release version 0.1 of the software implementing their system in January 2009.
+
+And it's all been downhill from there.
+--
+
+// Bitcoin: A Peer-to-Peer Electronic Cash System
+[data-transition=none]
+== !
+
+[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]
+--
+A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one part to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network.
+--
+
+[NOTE.speaker]
+--
+
+--
+
+[data-transition=none]
+== !
+
+[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]
+--
+The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the longest chain and outpace attackers.
+--
+
+[NOTE.speaker]
+--
+
+--
