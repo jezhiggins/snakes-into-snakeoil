@@ -1,0 +1,361 @@
+[data-transition=none]
+== Why They're Terrible
+
+[NOTE.speaker]
+--
+You've just seen a couple of adverts, one for BitCoin, one for Ethereum.  Did anything strike you about them?
+
+The thing that stands out to me is the, weirdly, the essence of distrust that runs through it - person to person, can't be frozen, no censorship, no third party interference, no banks.
+--
+
+[data-transition=none]
+== !
+
+*Cryptocurrencies are not currencies*
+
+[NOTE.speaker]
+--
+The "advantage" of cryptocurrencies is that there's no central authority, no reversibility.
+
+That's fundamentally at odds with our modern financial system, right? That relies on transaction reversibility to, for example, counteract fraud.
+
+The video a moment ago said "go to an exchange, buy some BitCoin with your actually useful dollars or Euros or Yen". But wait a minute, do I have to trust these exchanges then?
+
+Yes, you do.  But we're so easy, so they exchanges - we'll buy the cryptocurrency for you and we'll store you wallet too.
+--
+
+[data-transition=none]
+== !
+
+image::hacked-exchanges.png[]
+
+[NOTE.speaker]
+--
+There have been at least 20 hacks of cryptocurrency exchanges. Approximately 7% of all Bitcoins have been stolen.
+
+One of the most famous is this one in the middle there - Mt Gox. It was hacked twice, once in 2011 and once in 2014. The 2014 hack had a purported dollar value of $460 million.
+
+Do you know where the name MtGox comes from?  Magic The Gathering: Online Exchange. It was started as marketplace for Magic card trading, which ran for a few months in 2007. In 2010, Jed McCaleb read a Slashdot post about Bitcoin, tried to buy some and couldn't, so thought an exchange would be a good idea. He slapped together something in PHP, reused the domain, and that was that.
+
+In 2012, an exchange called Bitcoinica, run by a 17 year old kid, was hacked three times - March, May, and July.  The nominal dollar values were $228,000, $80,000, and $300,000.
+
+Bitcoin proponents will say - yea but that was the exchanges - the ledger was secure - which is true but unhelpful. They'll also say "yea, but banks get hacked" which is also true, but similarly unhelpful.
+
+Quadriga CX was Canada's largest crypto exchange. It's not clear if it was hacked, but there's certainly something going on. The founder apparently died, unexpectly, while on honeymoon in India. He was the only person with the passwords to the wallets. The wallets turned out to be empty. Approximately $160 million are missing.
+
+There's no regulation, no insurance, no nothing - you're out my friend.
+
+Ok, so let's not use the exchanges. Assuming I have managed to get hold of some cryptocurrency somehow, I'll keep my wallet nice and secure on my own device.
+--
+
+[data-transition=none]
+
+== !
+
+image::bitpay-compromise.png[]
+
+[NOTE.speaker]
+--
+But I still have to trust the software I'm using.
+
+Wallet software infected via dodgy NPM package. Users advised to update the software and move coins to a new wallet (to a new key-pair).  That poses an interesting question - if my device is compromised, how do I safely move my cryptocurrency to a new wallet.
+
+Moving to a new wallet/address is a bit like shutting down one bank account and opening another. That might not be super-convenient. In some future where you were paid in cryptocurrency, perhaps by some smart contract, changing your wallet address could mean you don't get paid. Ever.  (Unlike moving your account with one of those untrustworthy banks!)
+
+https://www.telegraph.co.uk/technology/2018/11/27/bitcoin-owners-told-transfer-savings-bitpay-exchange-private/
+--
+
+[data-transition=none]
+== !
+
+image::bitcoin-dump-2013.png[]
+
+[NOTE.speaker]
+--
+Oh dear. And make sure I have proper backups. [Also, don't thrown computer hardward in landfill man - that is super bad].
+
+This is a chap who mined some BitCoin some time previously, back when you could do that, then accidentally threw the hard drive away while "distracted by family life and moving house".
+--
+
+[data-transition=none]
+== !
+
+image::forgotten-pin.png[]
+
+[NOTE.speaker]
+--
+How sad. Or forget my pin.
+--
+
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+… entered his words into Notepad to print them out, and promptly had his Bitcoin stolen due to a keylogger …
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+… printed out his seed words but was missing several due to incorrectly page margins …
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+--
+[data-transition=none]
+== !
+
+image::walletrecovery.png[]
+
+A customer stored his recovery word card in his jeans. The card was destroyed when the jeans had been laundered, which he only discovered months later when updating his wallet firmware.
+
+[NOTE.speaker]
+--
+This is from walletrecovery.info
+
+Security is hard, and financial security is even harder.
+
+Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+
+Looks like this guy was using a hardware wallet, he'd stored his recovery phrase in a cold wallet (piece of paper), so he was probably pretty clued in. Still buggered it up.
+--
+
+[data-transition=none]
+== !
+
+image::bitcoin-coffee-prague.jpg[]
+
+[NOTE.speaker]
+--
+Somehow I've got some BitCoin, I've managed to keep it secure, but now it's buring a hole in my pocket! Got to spend it?
+
+But where?  Here we are in Bristol - it's busy, prosperous city - 8th or 9th biggest city economy in the country (Birmingham is second by the way, don't let anyone from Manchester tell you otherwise) - there are over a million people in the metropolitan area. Lots of cool places to eat and drink, quite a lot of software and technology companies locally.
+
+There is not a single place in Bristol that accepts cryptocurrency payments.
+
+This is not unique to Bristol. There are, to the first approximation, zero businesses that accept BitCoin or other cryptocurrencies. The minute number that do use a service like BitPay (yes, the same BitPay who's CEO got phished and who's wallet was compromised).
+
+What BitPay does is immediately convert the cryptocurrency payment back into dollars or whatever, and then giving that to the merchant. You probably used cash to by the BitCoin, which was immediately converted back into cash and our one transaction has turned into three. What was that about low fees again?
+
+But I really want to a cup of coffee, so I travel to this place in Prague. I order my coffee and I send my BitCoin payment. And I wait, and I wait. Eventually, the barista says "ok, you're payment is confirmed on the chain, here's your drink" and he gives me a stone cold cup of coffee.
+
+Remember how consensus arises in the peer-to-peer network? To be confident a transaction is incorporated in the chain I need to wait for it be 6 blocks deep. Three is probably ok, but 6 to be confident. BitCoin generates a new block every 10 minutes. The coffee has been sitting at least half an hour. Ethereum generates a new block every 15 seconds, but even so 45 seconds is a significant delay in a retail setting.
+
+Oh, and BitCoin has a maximum throughput of 7 transactions a second.  Visa processes about 150 million txs a day, which averages to 1700/sec.
+
+Again, one or other of us has to trust the other. I pay, then collect my coffee later maybe, or he gives me my coffee and hope the transaction goes through. So much for a trustless system.
+
+Nobody uses it to buy things.
+--
+
+[data-transition=none]
+== !
+
+image::howells-again.png[]
+
+[NOTE.speaker]
+--
+Here's James Howells again.  That first report I showed you was from 2013. In the intervening period the "value" of the lost harddrive has gone up to $80 million.  He had, apparently offered Newport Council £7.5 million to dig up this landfill.
+
+If the everyday-shoppers are wrong, maybe the store-of-value people are right?
+
+Let's imagine - we've had to do a lot of imagining - he found that harddrive, and recovered that wallet.  Would he be sitting on $80 million worth of BitCoin?
+
+No, he wouldn't. Instead he would be sitting on a £7.5 million bill from the council and a very small harddrive.
+
+There is no BitCoin economy.
+--
+
+[data-transition=none]
+== !
+
+image::volumes-are-fake.png[]
+
+[NOTE.speaker]
+--
+The overwhelming majority of crytpocurrency trading volumes are fake.  This is exchanges either outright lying about their trading volumes, or just swashing their own holdings back and forth in an attempt to move the market.
+
+But no need for trusted third-parties, no censorship, no third-party interference.
+
+Which is great for buying drugs and for money laundering, but not much else.
+--
+
+[data-transition=none]
+== !
+
+image::price-bump.png[]
+
+[NOTE.speaker]
+--
+This was a buy order for approximately $100 million "worth" of BitCoin. Huge, in terms of "normal" buy/sell orders, but not huge compared the alleged "market cap".  But still enough to move the market by 20%.
+
+Anyway, I've dug up my harddrive, got my wallet, and now I want to liquidate my BitCoins into actual useable money.  We've know the valuations are hugely inflated, but it must be worth something to somebody right?  Well, no.  The market is so illiquid that a sell of this size would crash the price.
+
+BitCoin is by far the biggest cryptocurrency - biggest in terms of public awareness, of active users, hashpower, however you want to manage it - which is why I've talked about it, but you might think maybe some of those other cryptocurrencies, they might sensible and legit right?
+--
+
+[data-transition=none]
+== !
+
+image::howells-bitcoin-is-rubbish.png[]
+
+[NOTE.speaker]
+--
+After all, even James Howells has gone off BitCoin, he's now much more interested in BitCoinCash.  BitCoinCash is a fork of BitCoin that's supposed to be quicker, cheaper, better.  BitCoinCash itself forked into Bitcoin ABC (Adjustable Blocksize Cap) and BitCoin SV (Satoshi's vision) in February this year.
+
+(After his landfill exploits, it was a joy to find this.)
+--
+
+[data-transition=none]
+== !
+
+image::elon-musk-dogecoin.png[]
+
+[NOTE.speaker]
+--
+Dogecoin was started as something of a joke, but now people pay real money for it.
+
+After Elon Musk posted this to Twitter...
+--
+
+[data-transition=none]
+== !
+
+image::dogecoin-price-hike.png[]
+
+[NOTE.speaker]
+--
+Dogecoin prices spiked and trading volumes went up 30%.
+
+It's pathetic.
+
+Ok, but I've got these coins, and I've secured my wallet, and my local coffee shop does take bitcoin, and it'll keep the coffee hot for me, the ledger is secure right? All these individual miners working away are securing the ledger for me?
+--
+
+[data-transition=none]
+== !
+
+image::bitcoin-miners.png[]
+
+[NOTE.speaker]
+--
+BitCoin mining is highly centralised, much more so than, say, banks, and the situation is worse for less popular cryptocurrencies.  BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, and there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
+
+What does a 51% attack mean?
+--
+
+[data-transition=none]
+== !
+
+image::another-n-plus-2.svg[]
+
+[NOTE.speaker]
+--
+Recall what's going on when we building the state of the chain. We're waiting for blocks to arrive so we can work out which ones are "real".  In my example, in normal operation, those blocks arrive attached near the tip. But they could arrive from anywhere in the past ...
+--
+
+[data-transition=none]
+== !
+
+image::ethereum-classic.png[]
+
+[NOTE.speaker]
+--
+Proof-of-work is not about securing the chain. It's about preventing "sybil attacks" - someone spinning up a whole load of nodes to generate blocks faster than the rest of the network. By spinning away on these useless calculations, it's intended to make that uneconomics for someone to do that. Which is fine, if you're content to burn approximately US$6 million a day to secure the network. If we just trusted we could run it off that old Amiga in your attack.
+
+A successful 51% attack allows the blockchain to be written - to spend currency twice, to prevent transactions going through, to erase data. And to mount that attack I just need to throw compute power at it.
+
+There's a website to let me do that.
+--
+
+[data-transition=none]
+== !
+
+image::nice-hash.png[]
+
+[NOTE.speaker]
+--
+NiceHash, of course, reject the idea that they're used for 51% attacks.
+--
+
+[data-transaction=none]
+== !
+
+[quote]
+--
+NiceHash does not support 51% attacks and we believe such deliberate and harmful actions should be taken very seriously.
+--
+
+[data-transaction=none]
+== !
+
+[quote]
+--
+NiceHash does not support 51% attacks and we believe such deliberate and harmful actions should be taken very seriously.
+--
+
+[quote]
+--
+NiceHash is giving everyone with smaller and less secure blockchain projects the option to make them more secure by leasing hash power. If you think your network is under attack , you can mitigate such attacks and further secure the network by using NiceHash! +
+If you want to keep your PoW-based blockchain safe, we highly recommend you periodically lease hash power through NiceHash hash power marketplace. Such activity will always result in making your blockchain more secure. Furthermore, you will get your own coins in the process thus we also recommend you start involving and educating your community that believes in your project.
+--
+
+[NOTE.speaker]
+--
+They continue ...
+
+This is a nice blockchain you got here. Shame if something happened to it.
+--
+
+
+[data-transition=none]
+== !
+
+*Cryptocurrencies are ...*
+[%step]
+* ... difficult to get hold of
+* ... difficult to keep hold of
+* ... even more difficult to spend
+* ... probably going to get lost or stolen or just fade away or jam up
+
+[NOTE.speaker]
+--
+This is by design.
+
+I could go on - I've ploughed through so much shit researching this - I had all these earlier incidents, but as I was writing this talk, new stuff just kept coming up - all these are recent examples, just from the last few days and weeks.  So I could continue just flogging away - about the economic illiteracy of all, the technologies, the crime, all the rest of it. But I think you get the message and you know where I'm coming from.
+
+There's a phrase you see quite a lot in the cryptocurrency discussions - well, I say discussions - where proponents of one cryptocurrency will refer to some or all of the others as "shitcoins". Truth is they're all shitcoins.
+
+Let's set cryptocurrencies aside, and just think about the blockchain technology. We read lots of things about that, and how it's going to revolutionise various industries.
+--
+

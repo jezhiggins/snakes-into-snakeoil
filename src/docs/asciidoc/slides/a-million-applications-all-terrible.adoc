@@ -1,280 +1,207 @@
 [data-transition=none]
-== Why They're Terrible
+== !
 
 [NOTE.speaker]
 --
-You've just seen a couple of adverts, one for BitCoin, one for Ethereum.  Did anything strike you about them?
-
-The thing that stands out to me is the, weirdly, the essence of distrust that runs through it - person to person, can't be frozen, no censorship, no third party interference, no banks.
+There must be something good in here right?
 --
 
 [data-transition=none]
 == !
 
-*Cryptocurrencies are not currencies*
+[quote]
+--
+Applications on built on Ethereum run exactly as programmed.
+--
 
 [NOTE.speaker]
 --
-The "advantage" of cryptocurrencies is that there's no central authority, no reversibility.
+Programming? Easy or hard?
 
-That's fundamentally at odds with our modern financial system, right? That relies on transaction reversibility to, for example, counteract fraud.
+Writing a program and getting right first time and never, ever being able to change it? Easy or hard?
 
-The video a moment ago said "go to an exchange, buy some BitCoin with your actually useful dollars or Euros or Yen". But wait a minute, do I have to trust these exchanges then?
-
-Yes, you do.  But we're so easy, so they exchanges - we'll buy the cryptocurrency for you and we'll store you wallet too.
+Smart contracts are extremely difficult to write correctly and kind of impossible to fix if they're broken. Naming things is acknowledged as a hard problem. Here, smart contract is a deliberate misnomer. The idea, the goal, is to replace legal contracts with nice precise accurate computer code. What could go wrong?
 --
 
 [data-transition=none]
 == !
 
-image::hacked-exchanges.png[]
+image::parity-multi-sig.png[]
 
 [NOTE.speaker]
 --
-There have been at least 20 hacks of cryptocurrency exchanges. Approximately 7% of all Bitcoins have been stolen.
+Parity's multi-sig wallet smart contract had a bug that allowed an attacker to take ownership of a wallet and drain the funds.  There was a huge amount stolen. The only reason more wasn't stolen was a because a "white-hat" nipped in and drained the remain wallets (that's a 51% attack!) and then gave the money back.
 
-One of the most famous is this one in the middle there - Mt Gox. It was hacked twice, once in 2011 and once in 2014. The 2014 hack had a purported dollar value of $460 million.
-
-Do you know where the name MtGox comes from?  Magic The Gathering: Online Exchange. It was started as marketplace for Magic card trading, which ran for a few months in 2007. In 2010, Jed McCaleb read a Slashdot post about Bitcoin, tried to buy some and couldn't, so thought an exchange would be a good idea. He slapped together something in PHP, reused the domain, and that was that.
-
-In 2012, an exchange called Bitcoinica, run by a 17 year old kid, was hacked three times - March, May, and July.  The nominal dollar values were $228,000, $80,000, and $300,000.
-
-Bitcoin proponents will say - yea but that was the exchanges - the ledger was secure - which is true but unhelpful. They'll also say "yea, but banks get hacked" which is also true, but similarly unhelpful.
-
-Quadriga CX was Canada's largest crypto exchange. It's not clear if it was hacked, but there's certainly something going on. The founder apparently died, unexpectly, while on honeymoon in India. He was the only person with the passwords to the wallets. The wallets turned out to be empty. Approximately $160 million are missing.
-
-There's no regulation, no insurance, no nothing - you're out my friend.
-
-Ok, so let's not use the exchanges. Assuming I have managed to get hold of some cryptocurrency somehow, I'll keep my wallet nice and secure on my own device.
---
-
-[data-transition=none]
-
-== !
-
-image::bitpay-compromise.png[]
-
-[NOTE.speaker]
---
-But I still have to trust the software I'm using.
-
-Wallet software infected via dodgy NPM package. Users advised to update the software and move coins to a new wallet (to a new key-pair).  That poses an interesting question - if my device is compromised, how do I safely move my cryptocurrency to a new wallet.
-
-Moving to a new wallet/address is a bit like shutting down one bank account and opening another. That might not be super-convenient. In some future where you were paid in cryptocurrency, perhaps by some smart contract, changing your wallet address could mean you don't get paid. Ever.  (Unlike moving your account with one of those untrustworthy banks!)
-
-https://www.telegraph.co.uk/technology/2018/11/27/bitcoin-owners-told-transfer-savings-bitpay-exchange-private/
+Phew. They issued an update. That means they deployed a new version of the contract, and have to tell everyone don't use that one, use this new one.
 --
 
 [data-transition=none]
 == !
 
-image::bitcoin-dump-2013.png[]
+image::parity-multi-sig-2.png[]
 
 [NOTE.speaker]
 --
-Oh dear. And make sure I have proper backups. [Also, don't thrown computer hardward in landfill man - that is super bad].
+Then another bug allowed someone to take control of a library contract the multi-sig wallet was using and kill it.
 
-This is a chap who mined some BitCoin some time previously, back when you could do that, then accidentally threw the hard drive away while "distracted by family life and moving house".
+The Parity multi-sig wallet was written in Solidity - that I showed a sample of earlier. The head of Parity designed Solidity.
 --
 
 [data-transition=none]
 == !
 
-image::forgotten-pin.png[]
-
 [NOTE.speaker]
 --
-How sad. Or forget my pin.
+But smart contracts? There must be some advantage in being able to express things in clear, unabiguous language right?
 --
 
 [data-transition=none]
 == !
 
-image::walletrecovery.png[]
+[quote]
+--
+Which party will control the House after the 2018 U.S. Midterm Election?
+--
 
 [NOTE.speaker]
 --
-This is from walletrecovery.info
+That's pretty clear, right? You'd be able to answer that question unambiguously.  Augur is a predication marketplace running on Ethereum. Last year, a market on this question was opened.
 
-Security is hard, and financial security is even harder.
+The market expiration date was 12 Oct 2018. The Democrats didn't officially take control until 3 Jan 2019, so one could argue the Republicans is the correct outcome - they controlled the house when the market closed.
 
-Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+One could argue and one has been.  The code is law camp argues "Republican" is the right answer, but people on the other side say "whoa, obviously the Dems won".
+
+Augur includes a dispute mechanism, which is now in its 6th round.  In order to trigger a dispute, you have to put up a bond. For each round the size of the bond gets bigger. There was already $700k tied up in market.  I tried to find out if the situation had resolved one way or the other, but I think it's stalled.
+
+Computer says no.
 --
 
 [data-transition=none]
 == !
 
-image::walletrecovery.png[]
-
-… entered his words into Notepad to print them out, and promptly had his Bitcoin stolen due to a keylogger …
+[quote]
+--
+Without any possibility of downtime ... or third-party interference
+--
 
 [NOTE.speaker]
 --
-This is from walletrecovery.info
-
-Security is hard, and financial security is even harder.
-
-Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+Depends what you mean by third-party interference.
 --
 
 [data-transition=none]
 == !
 
-image::walletrecovery.png[]
-
-… printed out his seed words but was missing several due to incorrectly page margins …
+image::cryptokitty.png[]
 
 [NOTE.speaker]
 --
-This is from walletrecovery.info
+Crytokitties is a game in which players purchase, collect, breed and sell various types of virtual cats. Collectors cards, basically.
 
-Security is hard, and financial security is even harder.
+As of December 5, 2017 Etherscan has reported a sixfold increase in pending transactions on Ethereum since the game's release just a week earlier. "CryptoKitties has become so popular that it's taking up a significant amount of available space for transactions on the Ethereum platform", said Garrick Hileman, from the University of Cambridge.[19] Ethereum miners increased the gas limit in response to CryptoKitties, which allowed for more data per block and increasing transactions per second.
 
-Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
---
-[data-transition=none]
-== !
-
-image::walletrecovery.png[]
-
-A customer stored his recovery word card in his jeans. The card was destroyed when the jeans had been laundered, which he only discovered months later when updating his wallet firmware.
-
-[NOTE.speaker]
---
-This is from walletrecovery.info
-
-Security is hard, and financial security is even harder.
-
-Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
-
-Looks like this guy was using a hardware wallet, he'd stored his recovery phrase in a cold wallet (piece of paper), so he was probably pretty clued in. Still buggered it up.
+"I'm sorry we didn't get that report done on time. There was this new cat-breeding game tying up all the network resources."
 --
 
 [data-transition=none]
 == !
 
-image::bitcoin-coffee-prague.jpg[]
+image::blockchains-will-revolutionize.png[]
 
 [NOTE.speaker]
 --
-Somehow I've got some BitCoin, I've managed to keep it secure, but now it's buring a hole in my pocket! Got to spend it?
+Blockchains will revolutionize, well, everything. Those adverts told us so!
 
-But where?  Here we are in Bristol - it's busy, prosperous city - 8th or 9th biggest city economy in the country (Birmingham is second by the way, don't let anyone from Manchester tell you otherwise) - there are over a million people in the metropolitan area. Lots of cool places to eat and drink, quite a lot of software and technology companies locally.
+Saays "report inappropriate predictions", hmm.
 
-There is not a single place in Bristol that accepts cryptocurrency payments.
-
-This is not unique to Bristol. There are, to the first approximation, zero businesses that accept BitCoin or other cryptocurrencies. The minute number that do use a service like BitPay (yes, the same BitPay who's CEO got phished and who's wallet was compromised).
-
-What BitPay does is immediately convert the cryptocurrency payment back into dollars or whatever, and then giving that to the merchant. You probably used cash to by the BitCoin, which was immediately converted back into cash and our one transaction has turned into three. What was that about low fees again?
-
-But I really want to a cup of coffee, so I travel to this place in Prague. I order my coffee and I send my BitCoin payment. And I wait, and I wait. Eventually, the barista says "ok, you're payment is confirmed on the chain, here's your drink" and he gives me a stone cold cup of coffee.
-
-Remember how consensus arises in the peer-to-peer network? To be confident a transaction is incorporated in the chain I need to wait for it be 6 blocks deep. Three is probably ok, but 6 to be confident. BitCoin generates a new block every 10 minutes. The coffee has been sitting at least half an hour. Ethereum generates a new block every 15 seconds, but even so 45 seconds is a significant delay in a retail setting.
-
-Oh, and BitCoin has a maximum throughput of 7 transactions a second.  Visa processes about 150 million txs a day, which averages to 1700/sec.
-
-Again, one or other of us has to trust the other. I pay, then collect my coffee later maybe, or he gives me my coffee and hope the transaction goes through. So much for a trustless system.
-
-Nobody uses it to buy things.
+Supply chain - let's take that. It's often talked about, including as a "solution" to the rather vexed question of the post-Brexit Irish border problem.
 --
 
 [data-transition=none]
 == !
 
-image::howells-again.png[]
+image::walmart.png[]
 
-[NOTE.speaker]
 --
-Here's James Howells again.  That first report I showed you was from 2013. In the intervening period the "value" of the lost harddrive has gone up to $80 million.  He had, apparently offered Newport Council £7.5 million to dig up this landfill.
+This is from the New York Times last September. Walmart going all blockchain to track salad veg.  You probably want to have this kind of tracking in the US because growers there are allowed to basically use raw cow shit as fertiliser, which is essentially like spraying salmonella on your plants.
 
-If the everyday-shoppers are wrong, maybe the store-of-value people are right?
+Anyway, sounds great right? Secure tracibility, find out where my shopping has come from.
 
-Let's imagine - we've had to do a lot of imagining - he found that harddrive, and recovered that wallet.  Would he be sitting on $80 million worth of BitCoin?
-
-No, he wouldn't. Instead he would be sitting on a £7.5 million bill from the council and a very small harddrive.
-
-There is no BitCoin economy.
+No. You don't get to find out. This is not a decentralised public thing. This is for them. It runs on IBM cloud service, which makes you wonder why they even need a blockchain. Just use a big old DB2 instance.
 --
 
 [data-transition=none]
 == !
 
-image::volumes-are-fake.png[]
+image::monalisa.jpg[]
 
-[NOTE.speaker]
 --
-The overwhelming majority of crytpocurrency trading volumes are fake.  This is exchanges either outright lying about their trading volumes, or just swashing their own holdings back and forth in an attempt to move the market.
+Who owns the Mona Lisa?
 
-But no need for trusted third-parties, no censorship, no third-party interference.
+An outfit called Verisart, founded in 2015, applies "blockchain technology to combine transparency, anonymity, and security to protect your records of creation and ownership".
 
-Which is great for buying drugs and for money laundering, but not much else.
---
+This will, apparently, increase the trust in art dealers and reduce fraud, presumably because you can show the provenance of a piece. It's another supply chain thing.
 
-[data-transition=none]
-== !
-
-image::price-bump.png[]
-
-[NOTE.speaker]
---
-This was a buy order for approximately $100 million "worth" of BitCoin. Huge, in terms of "normal" buy/sell orders, but not huge compared the alleged "market cap".  But still enough to move the market by 20%.
-
-Anyway, I've dug up my harddrive, got my wallet, and now I want to liquidate my BitCoins into actual useable money.  We've know the valuations are hugely inflated, but it must be worth something to somebody right?  Well, no.  The market is so illiquid that a sell of this size would crash the price.
-
-BitCoin is by far the biggest cryptocurrency - biggest in terms of public awareness, of active users, hashpower, however you want to manage it - which is why I've talked about it, but you might think maybe some of those other cryptocurrencies, they might sensible and legit right?
+But what if I see a fake and keep the original in my secret underground art gallery?
 --
 
 [data-transition=none]
 == !
 
-image::howells-bitcoin-is-rubbish.png[]
+image::edent.jpg[]
 
 [NOTE.speaker]
 --
-After all, even James Howells has gone off BitCoin, he's now much more interested in BitCoinCash.  BitCoinCash is a fork of BitCoin that's supposed to be quicker, cheaper, better.
+Terence Eden, senior GDS chap and general digital prankster, signed up with a pic of the Mona Lisa he'd grabbed from Wikipedia and, bish bosh, got a certificate of authenticity from Verisart.
 
-(After his landfill exploits, it was a joy to find this.)
+Verisart, of course, argue that this isn't the point, he deliberately mislead them, and so on.
+
+However, I think it's exactly the point. Blockchains can only "prove" the data on the chain.  This bit of data arrived at this time from this address. It can't say anything about what happened to the data before that, it certainly assert its truth, and it absolutely can't tie a digital certificate to a real world object.
 --
 
 [data-transition=none]
 == !
 
-image::elon-musk-dogecoin.png[]
+image::blockchain-whisky.png[]
 
 [NOTE.speaker]
 --
-Dogecoin was started as something of a joke, but now people pay real money for it.
+I mean you'd have to be drunk to believe that.
 
-After Elon Musk posted this to Twitter...
+This is true for every scenario - you can't tie something on the blockchain to a physical object.  You can't tie it to a real event either.
 --
 
 [data-transition=none]
 == !
 
-image::dogecoin-price-hike.png[]
+image::hr.png[]
 
 [NOTE.speaker]
 --
-Dogecoin prices spiked and trading volumes went up 30%.
+Blockchains will revolutionise HR, right, because we can have a complete and proper record of somebody's qualifications and job history and so on.
 
-It's pathetic.
+How do we verify that? I have a BSc in Electronic Engineering (Environmental and Ecological) from the University of Hull.  I got a 2:1 and I graduated in 1991.
+
+True, not true?
+
+It's not true, I got a 2:2.  How would you have confirmed that? Ask for my degree certificate? I don't know where it is, and if I did produce something how would you know it was genuine? You'd have to back to the University and ask them right?
+
+So, for a trustworthy piece of data to get onto the blockchain, I have to go to a trusted third party and ask them.
+
+What if such a third party doesn't exist?
+
+And what if they get it wrong? How does that play with GDPR, for instance. Or with libel laws? What is the data itself is illegal?
 --
 
 [data-transition=none]
 == !
 
-*Cryptocurrencies are ...*
-[%step]
-* ... difficult to get hold of
-* ... difficult to keep hold of
-* ... even more difficult to spend.
+image::zero-percent.png[]
 
 [NOTE.speaker]
 --
-This is by design.
-
-I could go on - I've ploughed through so much shit -- I had all these earlier incidents, but as I was writing this talk, new stuff just kept coming up - all these are recent examples, just from the last few days and weeks.  So I could continue just flogging away - about the economic illiteracy of all, the technologies, the crime, all the rest of it. But I think you get the message and you know where I'm coming from.
-
-Let's set cryptocurrencies aside, and just think about the blockchain technology. We read lots of things about that, and how it's going to revolutionise various industries.
+There is no good here. Cryptocurrencies are a pile of shit, smart contracts are extremely difficult, the public blockchain is unreliable. If I want a tamper-proof ledger, we've known how to do that for 40 years.
 --
+
+
 
