@@ -30,9 +30,9 @@ image::parity-multi-sig.png[]
 
 [NOTE.speaker]
 --
-Parity's multi-sig wallet smart contract had a bug that allowed an attacker to take ownership of a wallet and drain the funds.  There was a huge amount stolen. The only reason more wasn't stolen was a because a "white-hat" nipped in and drained the remain wallets (that's a 51% attack!) and then gave the money back.
+Parity's multi-sig wallet smart contract had a bug that allowed an attacker to take ownership of a wallet and drain the funds.  There was a huge amount stolen. The only reason more wasn't stolen was a because a "white-hat" nipped in and drained the remain wallets (that's a 51% attack!) and then gave the money back.  Phew, only US$30 million lost.
 
-Phew. They issued an update. That means they deployed a new version of the contract, and have to tell everyone don't use that one, use this new one.
+They issued an update. That means they deployed a new version of the contract, and have to tell everyone don't use that one, use this new one.
 --
 
 [data-transition=none]
@@ -42,7 +42,7 @@ image::parity-multi-sig-2.png[]
 
 [NOTE.speaker]
 --
-Then another bug allowed someone to take control of a library contract the multi-sig wallet was using and kill it.
+Then another bug allowed someone to take control of a library contract the multi-sig wallet was using and kill it.  US$240 millions frozen.
 
 The Parity multi-sig wallet was written in Solidity - that I showed a sample of earlier. The head of Parity designed Solidity.
 --
@@ -112,7 +112,7 @@ image::blockchains-will-revolutionize.png[]
 --
 Blockchains will revolutionize, well, everything. Those adverts told us so!
 
-Saays "report inappropriate predictions", hmm.
+Says "report inappropriate predictions", hmm.
 
 Supply chain - let's take that. It's often talked about, including as a "solution" to the rather vexed question of the post-Brexit Irish border problem.
 --
@@ -122,6 +122,7 @@ Supply chain - let's take that. It's often talked about, including as a "solutio
 
 image::bill-of-lading.png[]
 
+[NOTE.speaker]
 --
 Here's an news item from earlier this year. IBM and Pacific International Lines conducted a trial on a blockchain powered bill of lading. The bill of lading is the manifest of your goods being shipped, in this case 3000 cartons of mandarin oranges shipped from China to Singapore.
 
@@ -139,8 +140,9 @@ Once again, we have solutions in search of a problem.
 [data-transition=none]
 == !
 
-image::monalisa.jpg[]
+image::monalisa.jpeg[]
 
+[NOTE.speaker]
 --
 Who owns the Mona Lisa?
 
@@ -162,7 +164,10 @@ Terence Eden, senior GDS chap and general digital prankster, signed up with a pi
 
 Verisart, of course, argue that this isn't the point, he deliberately mislead them, and so on.
 
-However, I think it's exactly the point. Blockchains can only "prove" the data on the chain.  This bit of data arrived at this time from this address. It can't say anything about what happened to the data before that, it certainly assert its truth, and it absolutely can't tie a digital certificate to a real world object.
+The link is still live though
+https://verisart.com/works/23f2c64a-08c6-4a42-8013-84ac8422dffb
+
+However, I think it's exactly the point. Blockchains can only "prove" the data on the chain.  This bit of data arrived at this time from this address. It can't say anything about what happened to the data before that, it certainly can't assert its truth, and it absolutely can't tie a digital certificate to a real world object.
 --
 
 [data-transition=none]
@@ -206,8 +211,15 @@ image::zero-percent.png[]
 
 [NOTE.speaker]
 --
-There is no good here. Cryptocurrencies are a pile of shit, smart contracts are extremely difficult, the public blockchain is unreliable. If I want a tamper-proof ledger, we've known how to do that for 40 years.
+https://www.theregister.co.uk/2018/11/30/blockchain_study_finds_0_per_cent_success_rate/
+
+This is from November last year.  They found no evidence of anyone doing anything actually useful.
+
+There is no good here. Cryptocurrencies are a pile of shit, smart contracts are extremely difficult, the public blockchain is unreliable.  As technologists we've some right old rubbish come and go, but this stuff, this really is shit.
 --
+
+[data-transition=none]
+== And that's Why They're Terrible
 
 
 

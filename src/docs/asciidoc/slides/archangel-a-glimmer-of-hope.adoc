@@ -1,1 +1,67 @@
-== ARCHANGEL - a glimmer of hope
+[data-transition=none]
+== A glimmer of hope
+
+[quote]
+--
+The ARCHANGEL project proposes to delivery *long-term sustainability of digital archives* through *new technologies* that will ensure both the *accessibility to and integrity of digial archives*
+--
+
+[NOTE.speaker]
+--
+Always end on a high note, or something.
+
+I want to, very quickly, describe Archangel, which is about the only blockchain application you'll hear of that doesn't immediately make you feel dirty.
+
+Archangel is a collaboration between the University of Surrey CVSSP, The National Archives, and The Open Data Institute. It’s funded by Research Councils UK’s Digital Economy Programme through the EPSRC.
+--
+
+[data-transition=none]
+== !
+
+image::tna.jpg[]
+
+[NOTE.speaker]
+--
+Here's the National Archive, hey the official archive of the UK Government and for England and Wales.
+
+All Government records are retained by the Archive, and it also has a statutory role in overseeing custody of some other public records. Because of its history - it’s existed in some form or another for hundreds of years - and the importance of the documents it retains, it has a leading role in archive policy, not just in Britain, but globally.
+
+Organisations like TNA, and we can think of other examples in the UK like The Bodlian Library or around the world like The Library of Congress, use the term 'memory institution' (or AMI 'archival and memory institution'). They seem themselves as custodians of the country’s and the world’s history, and they take that extremely seriously. As you might imagine then, the people there are discomforted, at the very least, but the increasingly post-truth nature of public discourse.
+--
+
+[data-transition=none]
+== !
+
+image::chh-resignation-letter.jpg[]
+
+[NOTE.speaker]
+--
+We live in a time where those in charge of important national institutions are actively undermining them. It's not just Trump and his "Putin told me he didn't do it, so don't listen to the CIA, FBI, or NSA", it's happening here too.  This is Chris Heaton-Harris' resignation letter in which he says
+
+"It has been a privilege to work with some quite brilliant civil servants in my department ... They have moved mountation to prepare our country for leaving the EU with a negotiated deal. Unfortunately, I do not believe the briefings you have received on these matters have reflected all they have achieved or the preparation our European partners have made."
+
+This sounds to me like an accusation of dishonesty.
+
+We've got a public discourse that is actively undermining the institutions of state.
+
+Most AMIs operate some kind of delayed release. In this country Cabinet Office records are typically released after 20 years. But in twenty years, if we've constantly had our institutions diminished, why would people trust them? When they say "here are the records from such-and-such", it would be reasonable to say "but, that's just a bunch pdfs and word docs you could pulled out of anywhere".
+--
+
+[data-transition=none]
+== !
+
+image::OAIS.png[]
+
+[NOTE.speaker]
+--
+This is a quick overview of archival practice.
+
+If we write the SIP to a blockchain, then when we produce the document how ever many years later we can show it is the same document that went in.
+
+There's an experiment running at the moment using a permissioned blockchain - so the people who can write are limited but anyone can read it - involving TNA, various other UK organisations, and archives in Australia, Norway, Estonia, and elsewhere.  Each archive is a part of the PoA mining pool. In essence, each archive is helping to underpin the others. If they did collaborate to tamper with the chain, their collective reputations are destroyed. So we're not saying you don't need a trusted third party, we're saying there's are trusted third parties and each extra one means you can trust it a bit more.
+
+If you think Trump or whomever is interfering with their institutions, you'd have to believe in a world-spanning conspiracy to think they can interfere with Norway, Australia, etc, etc.
+
+I'm not saying it's going to change the world. But it might just make it a bit better.
+--
+

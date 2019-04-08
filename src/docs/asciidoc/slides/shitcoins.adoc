@@ -11,7 +11,6 @@ The thing that stands out to me is the, weirdly, the essence of distrust that ru
 [data-transition=none]
 == !
 
-*Cryptocurrencies are not currencies*
 
 [NOTE.speaker]
 --
@@ -271,6 +270,8 @@ image::bitcoin-miners.png[]
 --
 BitCoin mining is highly centralised, much more so than, say, banks, and the situation is worse for less popular cryptocurrencies.  BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, and there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
 
+If I can control over-half of the mining power of a network, I can attack it. This is known as a 51% attack.
+
 What does a 51% attack mean?
 --
 
@@ -293,7 +294,7 @@ image::ethereum-classic.png[]
 --
 Proof-of-work is not about securing the chain. It's about preventing "sybil attacks" - someone spinning up a whole load of nodes to generate blocks faster than the rest of the network. By spinning away on these useless calculations, it's intended to make that uneconomics for someone to do that. Which is fine, if you're content to burn approximately US$6 million a day to secure the network. If we just trusted we could run it off that old Amiga in your attack.
 
-A successful 51% attack allows the blockchain to be written - to spend currency twice, to prevent transactions going through, to erase data. And to mount that attack I just need to throw compute power at it.
+A successful 51% attack allows the blockchain to be rewritten - to spend currency twice, to prevent transactions going through, to erase data. And to mount that attack I just need to throw compute power at it.
 
 There's a website to let me do that.
 --
@@ -301,10 +302,12 @@ There's a website to let me do that.
 [data-transition=none]
 == !
 
-image::nice-hash.png[]
+image::nicehash.png[]
 
 [NOTE.speaker]
 --
+NiceHash leases compute power for cryptocurrency mining.
+
 NiceHash, of course, reject the idea that they're used for 51% attacks.
 --
 
@@ -327,21 +330,24 @@ NiceHash does not support 51% attacks and we believe such deliberate and harmful
 [quote]
 --
 NiceHash is giving everyone with smaller and less secure blockchain projects the option to make them more secure by leasing hash power. If you think your network is under attack , you can mitigate such attacks and further secure the network by using NiceHash! +
-If you want to keep your PoW-based blockchain safe, we highly recommend you periodically lease hash power through NiceHash hash power marketplace. Such activity will always result in making your blockchain more secure. Furthermore, you will get your own coins in the process thus we also recommend you start involving and educating your community that believes in your project.
+If you want to keep your PoW-based blockchain safe, we highly recommend you periodically lease hash power through NiceHash hash power marketplace. Such activity will always result in making your blockchain more secure.
 --
 
 [NOTE.speaker]
 --
 They continue ...
 
+I don't know about you, but that sound like a threat?
+
 This is a nice blockchain you got here. Shame if something happened to it.
 --
-
 
 [data-transition=none]
 == !
 
-*Cryptocurrencies are ...*
+*Cryptocurrencies are not currencies*
+
+They are ...
 [%step]
 * ... difficult to get hold of
 * ... difficult to keep hold of
