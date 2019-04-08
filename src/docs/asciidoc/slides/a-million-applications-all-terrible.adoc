@@ -31,13 +31,13 @@ image::hacked-exchanges.png[]
 
 [NOTE.speaker]
 --
+There have been at least 20 hacks of cryptocurrency exchanges. Approximately 7% of all Bitcoins have been stolen.
+
 One of the most famous is this one in the middle there - Mt Gox. It was hacked twice, once in 2011 and once in 2014. The 2014 hack had a purported dollar value of $460 million.
 
 Do you know where the name MtGox comes from?  Magic The Gathering: Online Exchange. It was started as marketplace for Magic card trading, which ran for a few months in 2007. In 2010, he read a Slashdot post about Bitcoin, tried to buy some and couldn't, so thought an exchange would be a good idea. He slapped together something in PHP, reused the domain, and that was that.
 
 In 2012, an exchange called Bitcoinica, run by a 17 year old kid, was hacked three times - March, May, and July.  The nominal dollar values were $228,000, $80,000, and $300,000.
-
-There have been at least 20 hacks of cryptocurrency exchanges. Approximately 7% of all Bitcoins have been stolen.
 
 Bitcoin proponents will say - yea but that was the exchanges - the ledger was secure - which is true but unhelpful. They'll also say "yea, but banks get hacked" which is also true, but similarly unhelpful.
 
