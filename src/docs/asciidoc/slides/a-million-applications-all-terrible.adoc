@@ -15,7 +15,7 @@ The thing that stands out to me is the, weirdly, the essence of distrust that ru
 
 [NOTE.speaker]
 --
-The "advantage" of cryptocurrenciesis that there's no central authority, no reversibility.
+The "advantage" of cryptocurrencies is that there's no central authority, no reversibility.
 
 That's fundamentally at odds with our modern financial system, right? That relies on transaction reversibility to, for example, counteract fraud.
 
@@ -35,11 +35,13 @@ There have been at least 20 hacks of cryptocurrency exchanges. Approximately 7% 
 
 One of the most famous is this one in the middle there - Mt Gox. It was hacked twice, once in 2011 and once in 2014. The 2014 hack had a purported dollar value of $460 million.
 
-Do you know where the name MtGox comes from?  Magic The Gathering: Online Exchange. It was started as marketplace for Magic card trading, which ran for a few months in 2007. In 2010, he read a Slashdot post about Bitcoin, tried to buy some and couldn't, so thought an exchange would be a good idea. He slapped together something in PHP, reused the domain, and that was that.
+Do you know where the name MtGox comes from?  Magic The Gathering: Online Exchange. It was started as marketplace for Magic card trading, which ran for a few months in 2007. In 2010, Jed McCaleb read a Slashdot post about Bitcoin, tried to buy some and couldn't, so thought an exchange would be a good idea. He slapped together something in PHP, reused the domain, and that was that.
 
 In 2012, an exchange called Bitcoinica, run by a 17 year old kid, was hacked three times - March, May, and July.  The nominal dollar values were $228,000, $80,000, and $300,000.
 
 Bitcoin proponents will say - yea but that was the exchanges - the ledger was secure - which is true but unhelpful. They'll also say "yea, but banks get hacked" which is also true, but similarly unhelpful.
+
+Quadriga CX was Canada's largest crypto exchange. It's not clear if it was hacked, but there's certainly something going on. The founder apparently died, unexpectly, while on honeymoon in India. He was the only person with the passwords to the wallets. The wallets turned out to be empty. Approximately $160 million are missing.
 
 There's no regulation, no insurance, no nothing - you're out my friend.
 
@@ -56,7 +58,9 @@ image::bitpay-compromise.png[]
 --
 But I still have to trust the software I'm using.
 
-Wallet software infected via dodgy NPM package. Users advised to update aoo and move coins to a new wallet.
+Wallet software infected via dodgy NPM package. Users advised to update the software and move coins to a new wallet (to a new key-pair).  That poses an interesting question - if my device is compromised, how do I safely move my cryptocurrency to a new wallet.
+
+Moving to a new wallet/address is a bit like shutting down one bank account and opening another. That might not be super-convenient. In some future where you were paid in cryptocurrency, perhaps by some smart contract, changing your wallet address could mean you don't get paid. Ever.  (Unlike moving your account with one of those untrustworthy banks!)
 
 https://www.telegraph.co.uk/technology/2018/11/27/bitcoin-owners-told-transfer-savings-bitpay-exchange-private/
 --
@@ -69,6 +73,8 @@ image::bitcoin-dump-2013.png[]
 [NOTE.speaker]
 --
 Oh dear. And make sure I have proper backups. [Also, don't thrown computer hardward in landfill man - that is super bad].
+
+This is a chap who mined some BitCoin some time previously, back when you could do that, then accidentally threw the hard drive away while "distracted by family life and moving house".
 --
 
 [data-transition=none]
@@ -140,51 +146,135 @@ This is from walletrecovery.info
 Security is hard, and financial security is even harder.
 
 Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
+
+Looks like this guy was using a hardware wallet, he'd stored his recovery phrase in a cold wallet (piece of paper), so he was probably pretty clued in. Still buggered it up.
 --
 
 [data-transition=none]
 == !
 
-[NOTE.speaker]
---
-In these modern times, we're very aware of that Silicon Valley (and I use that as something of a shorthand) is riddled with people who hold what generously be described as 'unfortunate' political beliefs. We think of this as a modern phenomenon. The Silicon Valley of the past has seemed fun and hippyish - everybody loves Woz right? - but it was ever thus.
-
-The prime movers in the search for electronic cash come from a libertarian anarcho-capitalist strand of thought that, I think, most of us would regard with horror. In particular, it regards government oversight (or as they would probably put it - unjustified government interference) as a threat and something to be worked around, undermined, and avoided.
-
-PayPal was explicitly founded as an anonymous money-transfer channel operating outside government regulation. Of course, Thiel changed tack as soon as he realised that being side the tent pissing in was going to be far less profitable that being inside the tent pissing all over the floor.
-
-Anyway, prior to Bitcoin, there had been a number of attempts at electronic cash. A guy called Nick Szabo proposed a thing called Bitgold, while Wei Dai described b-money, back in 1998. However, they didn't have implementations - they were, at least at the time, all talk and no trousers.
-
-One of the things these proposals foundered on was the double-spend problem. If you want to avoid government oversight, then you can't have any kind of central authority in your system because, you know, that gives that pesky government a regulatory hook point and before you know it they'll be asking you to pay tax and operate as at least a partially functioning member of society. However, if you don't have that central authority, what's to stop me spending £10 with you over here and the very same £10 with you over there, high-tailing it with the goods and stiffing one and/or both of you?
-
-Bitcoin, as a system, was described in a "white paper" published in October 2008 on a Cypherpunks mailing list by someone calling themselves Satoshi Nakamoto. They release version 0.1 of the software implementing their system in January 2009.
-
-And it's all been downhill from there.
---
-
-// Bitcoin: A Peer-to-Peer Electronic Cash System
-[data-transition=none]
-== !
-
-[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]
---
-A purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one part to another without going through a financial institution. Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double-spending. We propose a solution to the double-spending problem using a peer-to-peer network.
---
+image::bitcoin-coffee-prague.jpg[]
 
 [NOTE.speaker]
 --
+Somehow I've got some BitCoin, I've managed to keep it secure, but now it's buring a hole in my pocket! Got to spend it?
 
+But where?  Here we are in Bristol - it's busy, prosperous city - 8th or 9th biggest city economy in the country (Birmingham is second by the way, don't let anyone from Manchester tell you otherwise) - there are over a million people in the metropolitan area. Lots of cool places to eat and drink, quite a lot of software and technology companies locally.
+
+There is not a single place in Bristol that accepts cryptocurrency payments.
+
+This is not unique to Bristol. There are, to the first approximation, zero businesses that accept BitCoin or other cryptocurrencies. The minute number that do use a service like BitPay (yes, the same BitPay who's CEO got phished and who's wallet was compromised).
+
+What BitPay does is immediately convert the cryptocurrency payment back into dollars or whatever, and then giving that to the merchant. You probably used cash to by the BitCoin, which was immediately converted back into cash and our one transaction has turned into three. What was that about low fees again?
+
+But I really want to a cup of coffee, so I travel to this place in Prague. I order my coffee and I send my BitCoin payment. And I wait, and I wait. Eventually, the barista says "ok, you're payment is confirmed on the chain, here's your drink" and he gives me a stone cold cup of coffee.
+
+Remember how consensus arises in the peer-to-peer network? To be confident a transaction is incorporated in the chain I need to wait for it be 6 blocks deep. Three is probably ok, but 6 to be confident. BitCoin generates a new block every 10 minutes. The coffee has been sitting at least half an hour. Ethereum generates a new block every 15 seconds, but even so 45 seconds is a significant delay in a retail setting.
+
+Oh, and BitCoin has a maximum throughput of 7 transactions a second.  Visa processes about 150 million txs a day, which averages to 1700/sec.
+
+Again, one or other of us has to trust the other. I pay, then collect my coffee later maybe, or he gives me my coffee and hope the transaction goes through. So much for a trustless system.
+
+Nobody uses it to buy things.
 --
 
 [data-transition=none]
 == !
 
-[quote, Satoshi Nakamoto, Bitcoin: A Peer-to-Peer Electronic Cash System]
---
-The network timestamps transactions by hashing them into an ongoing chain of hash-based proof-of-work, forming a record that cannot be changed without redoing the proof-of-work. The longest chain not only serves as proof of the sequence of events witnessed, but proof that it came from the largest pool of CPU power. As long as majority of CPU power is controlled by nodes that are not cooperating to attack the network, they'll generate the longest chain and outpace attackers.
---
+image::howells-again.png[]
 
 [NOTE.speaker]
 --
+Here's James Howells again.  That first report I showed you was from 2013. In the intervening period the "value" of the lost harddrive has gone up to $80 million.  He had, apparently offered Newport Council £7.5 million to dig up this landfill.
 
+If the everyday-shoppers are wrong, maybe the store-of-value people are right?
+
+Let's imagine - we've had to do a lot of imagining - he found that harddrive, and recovered that wallet.  Would he be sitting on $80 million worth of BitCoin?
+
+No, he wouldn't. Instead he would be sitting on a £7.5 million bill from the council and a very small harddrive.
+
+There is no BitCoin economy.
 --
+
+[data-transition=none]
+== !
+
+image::volumes-are-fake.png[]
+
+[NOTE.speaker]
+--
+The overwhelming majority of crytpocurrency trading volumes are fake.  This is exchanges either outright lying about their trading volumes, or just swashing their own holdings back and forth in an attempt to move the market.
+
+But no need for trusted third-parties, no censorship, no third-party interference.
+
+Which is great for buying drugs and for money laundering, but not much else.
+--
+
+[data-transition=none]
+== !
+
+image::price-bump.png[]
+
+[NOTE.speaker]
+--
+This was a buy order for approximately $100 million "worth" of BitCoin. Huge, in terms of "normal" buy/sell orders, but not huge compared the alleged "market cap".  But still enough to move the market by 20%.
+
+Anyway, I've dug up my harddrive, got my wallet, and now I want to liquidate my BitCoins into actual useable money.  We've know the valuations are hugely inflated, but it must be worth something to somebody right?  Well, no.  The market is so illiquid that a sell of this size would crash the price.
+
+BitCoin is by far the biggest cryptocurrency - biggest in terms of public awareness, of active users, hashpower, however you want to manage it - which is why I've talked about it, but you might think maybe some of those other cryptocurrencies, they might sensible and legit right?
+--
+
+[data-transition=none]
+== !
+
+image::howells-bitcoin-is-rubbish.png[]
+
+[NOTE.speaker]
+--
+After all, even James Howells has gone off BitCoin, he's now much more interested in BitCoinCash.  BitCoinCash is a fork of BitCoin that's supposed to be quicker, cheaper, better.
+
+(After his landfill exploits, it was a joy to find this.)
+--
+
+[data-transition=none]
+== !
+
+image::elon-musk-dogecoin.png[]
+
+[NOTE.speaker]
+--
+Dogecoin was started as something of a joke, but now people pay real money for it.
+
+After Elon Musk posted this to Twitter...
+--
+
+[data-transition=none]
+== !
+
+image::dogecoin-price-hike.png[]
+
+[NOTE.speaker]
+--
+Dogecoin prices spiked and trading volumes went up 30%.
+
+It's pathetic.
+--
+
+[data-transition=none]
+== !
+
+*Cryptocurrencies are ...*
+[%step]
+* ... difficult to get hold of
+* ... difficult to keep hold of
+* ... even more difficult to spend.
+
+[NOTE.speaker]
+--
+This is by design.
+
+I could go on - I've ploughed through so much shit -- I had all these earlier incidents, but as I was writing this talk, new stuff just kept coming up - all these are recent examples, just from the last few days and weeks.  So I could continue just flogging away - about the economic illiteracy of all, the technologies, the crime, all the rest of it. But I think you get the message and you know where I'm coming from.
+
+Let's set cryptocurrencies aside, and just think about the blockchain technology. We read lots of things about that, and how it's going to revolutionise various industries.
+--
+
