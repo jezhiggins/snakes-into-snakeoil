@@ -120,14 +120,20 @@ Supply chain - let's take that. It's often talked about, including as a "solutio
 [data-transition=none]
 == !
 
-image::walmart.png[]
+image::bill-of-lading.png[]
 
 --
-This is from the New York Times last September. Walmart going all blockchain to track salad veg.  You probably want to have this kind of tracking in the US because growers there are allowed to basically use raw cow shit as fertiliser, which is essentially like spraying salmonella on your plants.
+Here's an news item from earlier this year. IBM and Pacific International Lines conducted a trial on a blockchain powered bill of lading. The bill of lading is the manifest of your goods being shipped, in this case 3000 cartons of mandarin oranges shipped from China to Singapore.
 
-Anyway, sounds great right? Secure tracibility, find out where my shopping has come from.
+"With the use of IBM Blockchain powered e-BL, the trial has produced a significant reduction in the administrative process of transferring the title deed from five to seven days to just one second, claimed the parties."
 
-No. You don't get to find out. This is not a decentralised public thing. This is for them. It runs on IBM cloud service, which makes you wonder why they even need a blockchain. Just use a big old DB2 instance.
+This article goes on to talk about how it's important fresh produce is moved quickly, and how you get cost savng because you don't have to refridgerate it for so long, and all the rest of it.
+
+Does anyone else smell anything?
+
+This five to seven days refers to paper based bills of lading, which nobody's used for 30 years on account of them all being modern and electronic. They use EDI, specifically the ANSI standard for electronic bills of lading: ANSI X12 EDI 211 Motor Carrier Bill of Lading. You'd think IBM would be aware of that, what with being a prime mover in the development of the EDI standards.
+
+Once again, we have solutions in search of a problem.
 --
 
 [data-transition=none]
