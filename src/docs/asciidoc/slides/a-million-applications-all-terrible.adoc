@@ -68,7 +68,19 @@ Which party will control the House after the 2018 U.S. Midterm Election?
 That's pretty clear, right? You'd be able to answer that question unambiguously.  Augur is a predication marketplace running on Ethereum. Last year, a market on this question was opened.
 
 The market expiration date was 12 Oct 2018. The Democrats didn't officially take control until 3 Jan 2019, so one could argue the Republicans is the correct outcome - they controlled the house when the market closed.
+--
 
+[data-transition=none]
+== !
+
+[quote]
+--
+Which party will control the House after the 2018 U.S. Midterm Election?
+--
+image::augur-pool.png[]
+
+[NOTE.speaker]
+--
 One could argue and one has been.  The code is law camp argues "Republican" is the right answer, but people on the other side say "whoa, obviously the Dems won".
 
 Augur includes a dispute mechanism, which is now in its 6th round.  In order to trigger a dispute, you have to put up a bond. For each round the size of the bond gets bigger. There was already $700k tied up in market.  I tried to find out if the situation had resolved one way or the other, but I think it's stalled.
