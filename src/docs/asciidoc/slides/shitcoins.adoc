@@ -358,6 +358,8 @@ They are ...
 --
 This is by design.
 
+Cryptocurrencies are founded in a strong libertarian ideology. This is why there's this emphasis on person-to-person, the loudly stated distrust of 'central authorities'. Bound up in this is the idea that banks can 'steal your cash' just by printing more, so we have a digital version of the gold standard. There will, for example, be 21 million BitCoin and no more. There's a reason the world abandoned the gold standard. There's a reason people uses banks. People like reversibility! It actually increases trust!
+
 I could go on - I've ploughed through so much shit researching this - I had all these earlier incidents, but as I was writing this talk, new stuff just kept coming up - all these are recent examples, just from the last few days and weeks.  So I could continue just flogging away - about the economic illiteracy of all, the technologies, the crime, all the rest of it. But I think you get the message and you know where I'm coming from.
 
 There's a phrase you see quite a lot in the cryptocurrency discussions - well, I say discussions - where proponents of one cryptocurrency will refer to some or all of the others as "shitcoins". Truth is they're all shitcoins.
