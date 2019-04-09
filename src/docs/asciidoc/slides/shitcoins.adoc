@@ -268,9 +268,15 @@ image::bitcoin-miners.png[]
 
 [NOTE.speaker]
 --
-BitCoin mining is highly centralised, much more so than, say, banks, and the situation is worse for less popular cryptocurrencies.  BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, and there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
+BitCoin mining is highly centralised, much more so than, say, banks, and the situation is worse for less popular cryptocurrencies.  These are mining pools - people cooperating together to try and find that magic random number.
 
-If I can control over-half of the mining power of a network, I can attack it. This is known as a 51% attack.
+Estimates vary for the number of actual miners - I've seen figures from 5000 to 150,000 to 300,000 - but that doesn't matter if they're cooperating in pools. There is, though, general agreement that something like 75% of all mining capacity is based in China.
+
+On Monday, China's National Development and Reform Commission listed cryptocurrency mining as one of the industries it wants to "eliminate". It'll be interesting to see what happens then. BitCoin maximalists are, bizarrely, saying this is why pool mining is a bad idea in the first place.
+
+If any of these pools come to dominate the hashpower of a cryptocurrency, they can attack it. This is known as a 51% attack.
+
+BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, and there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
 
 What does a 51% attack mean?
 --
@@ -311,7 +317,7 @@ NiceHash leases compute power for cryptocurrency mining.
 NiceHash, of course, reject the idea that they're used for 51% attacks.
 --
 
-[data-transaction=none]
+[data-transition=none]
 == !
 
 [quote]
@@ -319,7 +325,7 @@ NiceHash, of course, reject the idea that they're used for 51% attacks.
 NiceHash does not support 51% attacks and we believe such deliberate and harmful actions should be taken very seriously.
 --
 
-[data-transaction=none]
+[data-transition=none]
 == !
 
 [quote]
@@ -359,6 +365,8 @@ They are ...
 This is by design.
 
 Cryptocurrencies are founded in a strong libertarian ideology. This is why there's this emphasis on person-to-person, the loudly stated distrust of 'central authorities'. Bound up in this is the idea that banks can 'steal your cash' just by printing more, so we have a digital version of the gold standard. There will, for example, be 21 million BitCoin and no more. There's a reason the world abandoned the gold standard. There's a reason people uses banks. People like reversibility! It actually increases trust!
+
+Those big mining pools come, ironically enough, from people trusting each other. Rather than a network of suspicious preppers all dug into their bunkers, there are people actually trusting each other! Woah!
 
 I could go on - I've ploughed through so much shit researching this - I had all these earlier incidents, but as I was writing this talk, new stuff just kept coming up - all these are recent examples, just from the last few days and weeks.  So I could continue just flogging away - about the economic illiteracy of all, the technologies, the crime, all the rest of it. But I think you get the message and you know where I'm coming from.
 
