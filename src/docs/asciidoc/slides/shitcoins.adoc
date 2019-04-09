@@ -276,7 +276,7 @@ On Monday, China's National Development and Reform Commission listed cryptocurre
 
 If any of these pools come to dominate the hashpower of a cryptocurrency, they can attack it. This is known as a 51% attack.
 
-BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, and there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
+BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, several smaller cryptocurrencies have been subject to successful attacks. Even some of the larger ones are at risk, there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
 
 What does a 51% attack mean?
 --
@@ -346,6 +346,8 @@ They continue ...
 I don't know about you, but that sound like a threat?
 
 This is a nice blockchain you got here. Shame if something happened to it.
+
+There's another website, https://www.crypto51.app/, which tells you how much it would cost to to attack a particular cryptocurrency and how much of the hash power you can rent from nicehash. For under $100 dollars we could, for instance, take over Dubaicoin "is the fuel of Arabianchain and the first minable digital currency in the [middle east]".
 --
 
 [data-transition=none]
