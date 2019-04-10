@@ -50,6 +50,28 @@ The Parity multi-sig wallet was written in Solidity - that I showed a sample of 
 [data-transition=none]
 == !
 
+image::dao-logo.png[]
+
+[NOTE.speaker]
+--
+Well, maybe that was just bad luck, eh? Maybe.
+
+The DAO, the Distributed Autonomous Organisation, was a stateless, decentralised company, with no physical address and no board of directors. It existed solely as a set of contracts on the Ethereum blockchain. This is like a William Gibson novel come to life, right?
+
+People buy in and get given tokens which confer voting rights, then they vote to invest in proposals other people submit. The profits flow back into the DAO and out to the token holders. They'd be a secondary market in the tokens. It had pulled in nearly 14% of all issued Ether at the time.
+
+Great!
+
+Launched on 28 April 2016. By the end of May it had attracted $150million from over 11,000 investors.
+
+Two weeks later, an attacker gained control of about a third of the funds that had been committed.
+
+You know that whole person-to-person, no revocability thing?  Turns out that when the developers of the cryptocurrency software get powned, it's ok to rewrite the code, reset the chain and pretend it never happened. Ethereum was hardforked to regain control of the funds. Those that objected didn't follow the fork, they now exist in a parallel universe called Ethereum Classic.
+--
+
+[data-transition=none]
+== !
+
 [NOTE.speaker]
 --
 But smart contracts? There must be some advantage in being able to express things in clear, unabiguous language right?
