@@ -22,7 +22,7 @@ image::tna.jpg[]
 
 [NOTE.speaker]
 --
-Here's the National Archive, hey the official archive of the UK Government and for England and Wales.
+Here's the National Archive. They are the official archive of the UK Government and for England and Wales.
 
 All Government records are retained by the Archive, and it also has a statutory role in overseeing custody of some other public records. Because of its history - it’s existed in some form or another for hundreds of years - and the importance of the documents it retains, it has a leading role in archive policy, not just in Britain, but globally.
 
@@ -58,7 +58,7 @@ This is a quick overview of archival practice.
 
 If we write the SIP to a blockchain, then when we produce the document how ever many years later we can show it is the same document that went in.
 
-There's an experiment running at the moment using a permissioned blockchain - so the people who can write are limited but anyone can read it - involving TNA, various other UK organisations, and archives in Australia, Norway, Estonia, and elsewhere.  Each archive is a part of the PoA mining pool. In essence, each archive is helping to underpin the others. If they did collaborate to tamper with the chain, their collective reputations are destroyed. So we're not saying you don't need a trusted third party, we're saying there's are trusted third parties and each extra one means you can trust it a bit more.
+There's an experiment running at the moment using a permissioned blockchain - so the people who can write are limited but anyone can read it - involving TNA, various other UK organisations, and archives in Australia, Norway, Estonia, and elsewhere.  Each archive is a part of the PoA mining clique. In essence, each archive is helping to underpin the others. If they did collaborate to tamper with the chain, their collective reputations are destroyed. So we're not saying you don't need a trusted third party, we're saying there's are trusted third parties and each extra one means you can trust it a bit more.
 
 If you think Trump or whomever is interfering with their institutions, you'd have to believe in a world-spanning conspiracy to think they can interfere with Norway, Australia, etc, etc.
 

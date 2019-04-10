@@ -148,7 +148,7 @@ Blockchains will revolutionize, well, everything. Those adverts told us so!
 
 Says "report inappropriate predictions", hmm.
 
-Supply chain - let's take that. It's often talked about, including as a "solution" to the rather vexed question of the post-Brexit Irish border problem.
+But serious corporations are involved in this blockchain business, so there must be something to it? Must be. Even IBM are getting aboard the blockchain, and nobody ever got fired for buying IBM, right?.
 --
 
 [data-transition=none]
@@ -166,7 +166,7 @@ This article goes on to talk about how it's important fresh produce is moved qui
 
 Does anyone else smell anything?
 
-This five to seven days refers to paper based bills of lading, which nobody's used for 30 years on account of them all being modern and electronic. They use EDI, specifically the ANSI standard for electronic bills of lading: ANSI X12 EDI 211 Motor Carrier Bill of Lading. You'd think IBM would be aware of that, what with being a prime mover in the development of the EDI standards.
+This five to seven days refers to paper based bills of lading, which nobody's used for 30 years on account of them all being modern and electronic. They use EDI, specifically the ANSI standard for electronic bills of lading: ANSI X12 EDI 211 Motor Carrier Bill of Lading. You'd think IBM would be aware of that, what with them being a prime mover in the development of the EDI standards.
 
 Once again, we have solutions in search of a problem.
 --

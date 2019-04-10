@@ -73,7 +73,7 @@ image::bitcoin-dump-2013.png[]
 --
 Oh dear. And make sure I have proper backups. [Also, don't thrown computer hardward in landfill man - that is super bad].
 
-This is a chap who mined some BitCoin some time previously, back when you could do that, then accidentally threw the hard drive away while "distracted by family life and moving house".
+This is a chap, James Howells, who mined some BitCoin some time previously, back when you could do that, then accidentally threw the hard drive away while "distracted by family life and moving house". By the time he realised it was somewhere in this landfill site.
 --
 
 [data-transition=none]
@@ -105,15 +105,11 @@ Remember, person-to-person, irreversible, no censorship, no limits. This is by d
 
 image::walletrecovery.png[]
 
-… entered his words into Notepad to print them out, and promptly had his Bitcoin stolen due to a keylogger …
+… typed his recovery words into Notepad to print them out, and promptly had his Bitcoin stolen due to a keylogger …
 
 [NOTE.speaker]
 --
 This is from walletrecovery.info
-
-Security is hard, and financial security is even harder.
-
-Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
 --
 
 [data-transition=none]
@@ -121,15 +117,11 @@ Remember, person-to-person, irreversible, no censorship, no limits. This is by d
 
 image::walletrecovery.png[]
 
-… printed out his seed words but was missing several due to incorrectly page margins …
+… printed out his seed words but was missing several due to incorrectly set page margins …
 
 [NOTE.speaker]
 --
 This is from walletrecovery.info
-
-Security is hard, and financial security is even harder.
-
-Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
 --
 [data-transition=none]
 == !
@@ -142,11 +134,11 @@ A customer stored his recovery word card in his jeans. The card was destroyed wh
 --
 This is from walletrecovery.info
 
+Looks like this guy was using a hardware wallet, he'd stored his recovery phrase in a cold wallet (piece of paper), so he was probably pretty clued in. Still buggered it up.
+
 Security is hard, and financial security is even harder.
 
 Remember, person-to-person, irreversible, no censorship, no limits. This is by design.
-
-Looks like this guy was using a hardware wallet, he'd stored his recovery phrase in a cold wallet (piece of paper), so he was probably pretty clued in. Still buggered it up.
 --
 
 [data-transition=none]
@@ -156,15 +148,15 @@ image::bitcoin-coffee-prague.jpg[]
 
 [NOTE.speaker]
 --
-Somehow I've got some BitCoin, I've managed to keep it secure, but now it's buring a hole in my pocket! Got to spend it?
+Somehow I've got some BitCoin, I've managed to keep it secure, but now it's burning a hole in my pocket! Got to spend it! Got to spend them bitcoins.
 
 But where?  Here we are in Bristol - it's busy, prosperous city - 8th or 9th biggest city economy in the country (Birmingham is second by the way, don't let anyone from Manchester tell you otherwise) - there are over a million people in the metropolitan area. Lots of cool places to eat and drink, quite a lot of software and technology companies locally.
 
 There is not a single place in Bristol that accepts cryptocurrency payments.
 
-This is not unique to Bristol. There are, to the first approximation, zero businesses that accept BitCoin or other cryptocurrencies. The minute number that do use a service like BitPay (yes, the same BitPay who's CEO got phished and who's wallet was compromised).
+This is not unique to Bristol. There are, to the first approximation, zero businesses that accept BitCoin or other cryptocurrencies. The minute number that do use a service like BitPay (yes, the same BitPay who's wallet was compromised, oh and who's CEO got phished and had his own wallet drained).
 
-What BitPay does is immediately convert the cryptocurrency payment back into dollars or whatever, and then giving that to the merchant. You probably used cash to by the BitCoin, which was immediately converted back into cash and our one transaction has turned into three. What was that about low fees again?
+What BitPay does is immediately convert the cryptocurrency payment back into dollars or whatever, and then pass that to the merchant. You probably used cash to by the BitCoin, which was immediately converted back into cash and our one transaction has turned into three. What was that about low fees again?
 
 But I really want to a cup of coffee, so I travel to this place in Prague. I order my coffee and I send my BitCoin payment. And I wait, and I wait. Eventually, the barista says "ok, you're payment is confirmed on the chain, here's your drink" and he gives me a stone cold cup of coffee.
 
@@ -174,7 +166,42 @@ Oh, and BitCoin has a maximum throughput of 7 transactions a second.  Visa proce
 
 Again, one or other of us has to trust the other. I pay, then collect my coffee later maybe, or he gives me my coffee and hope the transaction goes through. So much for a trustless system.
 
-Nobody uses it to buy things.
+Well, what if I have a less time critical system - I'm sure you've all had work done, or have done work, that you're billed for later right
+--
+
+[data-transition=none]
+== !
+
+image::locksmith.png[]
+
+[NOTE.speaker]
+--
+Here's an actual business that you can actually pay with honest to god BitCoin.
+--
+
+[data-transition=none]
+== !
+
+image::locksmith-no-customers.png[]
+
+[quote]
+--
+Since that point over four years ago and at the time of writing, we have not had one customer ask to pay in BitCoin, Dash or any other cryptocurrency.
+--
+
+[NOTE.speaker]
+--
+They've been accepting BitCoin for over 4 years, and have had exactly zero customers who want to pay with BitCoin.  They're still very positive about it though.
+--
+
+[data-transition=none]
+== !
+
+image::locksmith-again.png[]
+
+[quote]
+--
+While none of our customers has actually paid a locksmithing invoice with Bitcoin we have had lots of interested people wanting to discuss the subject in depth.
 --
 
 [data-transition=none]
@@ -202,11 +229,13 @@ image::volumes-are-fake.png[]
 
 [NOTE.speaker]
 --
-The overwhelming majority of crytpocurrency trading volumes are fake.  This is exchanges either outright lying about their trading volumes, or just swashing their own holdings back and forth in an attempt to move the market.
+The overwhelming majority of crytpocurrency trading volumes are fake.  This is exchanges either outright lying about their trading volumes, or just swashing their own holdings back and forth in an attempt to move the market.  And they're not swashing it between BitCoin and dollars.  They're moving it between different cryptocurrencies. And, as we've already seen, cryptocurrencies are like standards. The nice thing about them is that you have so many to choose from. Furthermore, if you do not like any of them, you can just wait for next year's model.
+
+Tether.
 
 But no need for trusted third-parties, no censorship, no third-party interference.
 
-Which is great for buying drugs and for money laundering, but not much else.
+Which is great for buying drugs, ransoms, and for money laundering, but not much else.
 --
 
 [data-transition=none]
@@ -216,9 +245,9 @@ image::price-bump.png[]
 
 [NOTE.speaker]
 --
-This was a buy order for approximately $100 million "worth" of BitCoin. Huge, in terms of "normal" buy/sell orders, but not huge compared the alleged "market cap".  But still enough to move the market by 20%.
+This was a buy order for approximately $100 million "worth" of BitCoin. Huge, in terms of "normal" buy/sell orders, but not huge compared the alleged "market cap" of $93billion.  But still enough to move the market by 20%.
 
-Anyway, I've dug up my harddrive, got my wallet, and now I want to liquidate my BitCoins into actual useable money.  We've know the valuations are hugely inflated, but it must be worth something to somebody right?  Well, no.  The market is so illiquid that a sell of this size would crash the price.
+Anyway, I've dug up my harddrive, got my wallet, and now I want to liquidate my BitCoins into actual useable money.  We've know the valuations are hugely inflated, but it must be worth something to somebody right?  Well, no.  The market is so illiquid that a sell of this size would crash the price.  Almost nobody is using it - there is no economy.
 
 BitCoin is by far the biggest cryptocurrency - biggest in terms of public awareness, of active users, hashpower, however you want to manage it - which is why I've talked about it, but you might think maybe some of those other cryptocurrencies, they might sensible and legit right?
 --
@@ -233,6 +262,8 @@ image::howells-bitcoin-is-rubbish.png[]
 After all, even James Howells has gone off BitCoin, he's now much more interested in BitCoinCash.  BitCoinCash is a fork of BitCoin that's supposed to be quicker, cheaper, better.  BitCoinCash itself forked into Bitcoin ABC (Adjustable Blocksize Cap) and BitCoin SV (Satoshi's vision) in February this year.
 
 (After his landfill exploits, it was a joy to find this.)
+
+Elon Musk, we learned yesterday, Stack Overflow users consider will be the most influential person in technology in 2019. Perhaps he has something to say.
 --
 
 [data-transition=none]
@@ -242,7 +273,7 @@ image::elon-musk-dogecoin.png[]
 
 [NOTE.speaker]
 --
-Dogecoin was started as something of a joke, but now people pay real money for it.
+Dogecoin was started as something of a joke, with software that's a fork of a fork of a fork of BitCoin, but now people pay real money for it.
 
 After Elon Musk posted this to Twitter...
 --
@@ -268,7 +299,7 @@ image::bitcoin-miners.png[]
 
 [NOTE.speaker]
 --
-BitCoin mining is highly centralised, much more so than, say, banks, and the situation is worse for less popular cryptocurrencies.  These are mining pools - people cooperating together to try and find that magic random number.
+BitCoin mining is highly centralised, and the situation is worse for less popular cryptocurrencies.  These are mining pools - people cooperating together to try and find that magic random number.
 
 Estimates vary for the number of actual miners - I've seen figures from 5000 to 150,000 to 300,000 - but that doesn't matter if they're cooperating in pools. There is, though, general agreement that something like 75% of all mining capacity is based in China.
 
@@ -276,7 +307,7 @@ On Monday, China's National Development and Reform Commission listed cryptocurre
 
 If any of these pools come to dominate the hashpower of a cryptocurrency, they can attack it. This is known as a 51% attack.
 
-BitCoinCash, beloved of our friend from Newport, was at risk at end of last year, several smaller cryptocurrencies have been subject to successful attacks. Even some of the larger ones are at risk, there was a successful attack on Ethereum Classic (an Ethereum fork) was successfully attacked in January.
+BitCoinCash, newly beloved of our friend from Newport, was at risk at end of last year, several smaller cryptocurrencies have been subject to successful attacks. Even some of the larger ones are at risk. Ethereum Classic (an Ethereum fork) was successfully attacked in January.
 
 What does a 51% attack mean?
 --
@@ -288,7 +319,7 @@ image::another-n-plus-2.svg[]
 
 [NOTE.speaker]
 --
-Recall what's going on when we building the state of the chain. We're waiting for blocks to arrive so we can work out which ones are "real".  In my example, in normal operation, those blocks arrive attached near the tip. But they could arrive from anywhere in the past ...
+Recall what's going on when we building the state of the chain. We're waiting for blocks to arrive so we can work out which ones are "real".  In my example, in normal operation, those blocks arrive attached near the tip. But they could arrive linked to anywhere in the past, even the deep past.
 --
 
 [data-transition=none]
@@ -298,7 +329,9 @@ image::ethereum-classic.png[]
 
 [NOTE.speaker]
 --
-Proof-of-work is not about securing the chain. It's about preventing "sybil attacks" - someone spinning up a whole load of nodes to generate blocks faster than the rest of the network. By spinning away on these useless calculations, it's intended to make that uneconomics for someone to do that. Which is fine, if you're content to burn approximately US$6 million a day to secure the network. If we just trusted we could run it off that old Amiga in your attack.
+In the Ethereum Classic attack, block reorganisation went 100 blocks deep. During the attack on BitCoinCash, people we advise to wait 50 blocks to confirm transactions. That's nearly long enough for my coffee to not only have gone cold, but have completely evaporated.
+
+Proof-of-work is not about securing the chain. It's about preventing "sybil attacks" - someone spinning up a whole load of nodes to generate blocks faster than the rest of the network. By spinning away on these useless calculations, it's intended to make it uneconomic for someone to do that. Which is fine, if you're happy to burn approximately US$6 million a day to secure the network. If we just trusted each other, we could run these networks off that old Amiga in your attack.
 
 A successful 51% attack allows the blockchain to be rewritten - to spend currency twice, to prevent transactions going through, to erase data. And to mount that attack I just need to throw compute power at it.
 
